@@ -55,7 +55,7 @@ const App = () => {
         <section id="presentation" className="scroll-mt-12">
           <Presentation />
         </section>
-        <section id="gallery" className="scroll-mt-12">
+        <section id="gallery" className="hidden md:block scroll-mt-12">
           <Gallery />
         </section>
         <section id="programme" className="scroll-mt-12">
@@ -64,7 +64,7 @@ const App = () => {
         <section id="admission" className="scroll-mt-12">
           <Admission />
         </section>
-        <section id="activites" className="scroll-mt-12">
+        <section id="activites" className="hidden md:block scroll-mt-12">
           <Activities />
         </section>
         {/* <section id="actualites" className="scroll-mt-12">
