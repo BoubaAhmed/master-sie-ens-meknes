@@ -115,7 +115,7 @@ const Footer = () => {
                 <MapPin className="h-4 w-4 mr-3" />
                 <span>BP.3104, Toulal, ENS Meknès, Maroc</span>
               </div>
-              <a href="mailto:e.abdellaouialaoui@uml.ac.ma" className="flex items-center text-blue-200 hover:text-white transition-colors group text-sm">
+              <a href="mailto:e.abdellaouialaoui@umi.ac.ma" className="flex items-center text-blue-200 hover:text-white transition-colors group text-sm">
                 <Mail className="h-4 w-4 mr-3" />
                 <span>Nous écrire</span>
               </a>
