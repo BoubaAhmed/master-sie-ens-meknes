@@ -13,91 +13,94 @@ import {
   CircuitBoard,
   Cloud,
   Database,
-  Sparkles
+  Sparkles,
+  ArrowDown,
+  Users,
+  Lightbulb,
+  Star
 } from 'lucide-react';
 
 const Hero = () => {
-  const floatingIcons = [
-    { icon: Brain, top: '10%', left: '5%', delay: '0s' },
-    { icon: Code2, top: '20%', right: '10%', delay: '0.5s' },
-    { icon: Cpu, bottom: '5%', left: '8%', delay: '1s' },
-    { icon: Database, top: '45%', right: '15%', delay: '1.5s' },
-    { icon: CircuitBoard, bottom: '10%', right: '10%', delay: '2s' },
-    { icon: Cloud, top: '25%', left: '15%', delay: '2.5s' },
-    { icon: Bot, bottom: '5%', right: '32%', delay: '3s' },
-    { icon: Sparkles, top: '45%', left: '12%', delay: '3.5s' }
+  const features = [
+    { icon: Brain, text: "Intelligence Artificielle", color: "text-blue-400" },
+    { icon: Code2, text: "Développement Avancé", color: "text-purple-400" },
+    { icon: Cpu, text: "Systèmes Intelligents", color: "text-pink-400" },
+    { icon: BookOpen, text: "Pédagogie Innovante", color: "text-indigo-400" }
   ];
 
   return (
-    <section className="relative text-white py-20 md:py-32 overflow-hidden">
+    <section className="relative text-white py-12 md:py-20 lg:py-28 overflow-hidden">
+      {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {floatingIcons.map((item, index) => {
-          const IconComponent = item.icon;
-          return (
-            <div
-              key={index}
-              className="absolute text-white/35 animate-float"
-              style={{
-                top: item.top,
-                left: item.left,
-                right: item.right,
-                bottom: item.bottom,
-                animationDelay: item.delay
-              }}
-            >
-              <IconComponent className="h-7 w-7 md:h-8 md:w-8" />
-            </div>
-          );
-        })}
+        {/* Animated gradient orbs */}
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/15 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-indigo-500/10 rounded-full blur-2xl animate-pulse delay-500"></div>
         
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/3 right-1/3 w-48 h-48 bg-indigo-500/10 rounded-full blur-2xl animate-pulse delay-500"></div>
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          {/* Main Title */}
-          <div className="text-center mb-8">
-            <div className="relative flex flex-col items-center justify-center text-center mb-8 px-4">
-              <div className="absolute w-3 h-3 sm:w-4 sm:h-4 bg-blue-400 rounded-full top-0 left-1/4 opacity-70 animate-bounce"></div>
-              <div className="absolute w-4 h-4 sm:w-5 sm:h-5 bg-purple-500 rounded-full bottom-2 left-1/3 opacity-40 animate-bounce delay-300"></div>
-              <div className="absolute w-3 h-3 sm:w-4 sm:h-4 bg-pink-400 rounded-full top-4 right-1/4 opacity-70 animate-bounce delay-700"></div>
-              <div className="absolute w-4 h-4 sm:w-5 sm:h-5 bg-indigo-400 rounded-full bottom-4 right-1/3 opacity-60 animate-bounce delay-500"></div>
-
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium mb-2 leading-tight">
-                <span  className=" font-medium bg-gradient-to-r from-blue-200 via-purple-400 to-blue-200 bg-clip-text text-transparent bg-size-200 animate-gradient">
-                  Master Systèmes Intelligents
+        <div className="max-w-7xl mx-auto">
+          {/* Main Content */}
+          <div className="text-center mb-12">
+            {/* Main Title */}
+            <div className="relative mb-8">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl blur-2xl opacity-50"></div>
+              
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight relative">
+                <span style={{ fontFamily: "Capriola", sansSerif: true }} className="block bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text text-transparent">
+                  Master
                 </span>
-                <br />
-                <span className="text-white mt-1 block">
-                  pour l'Éducation
+                <span className="block bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text text-transparent mt-2">
+                  Systèmes Intelligents Pour l'Éducation
                 </span>
               </h1>
+              
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mt-6"></div>
+            </div>
+
+            {/* Subtitle */}
+            <p className="text-lg md:text-xl text-blue-100 leading-relaxed max-w-6xl mx-auto mb-8 font-light">
+              Formez-vous aux <span className="text-white font-semibold">technologies d'IA avancées</span> et
+              révolutionnez l'éducation de demain grâce aux systèmes intelligents
+            </p>
+
+            {/* Features Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-12">
+              {features.map((feature, index) => {
+                const IconComponent = feature.icon;
+                return (
+                  <div key={index} className="flex flex-col items-center text-center group">
+                    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-3 mb-2 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
+                      <IconComponent className={`h-6 w-6 ${feature.color}`} />
+                    </div>
+                    <span className="text-xs md:text-sm text-blue-100 font-medium">{feature.text}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
-          {/* Subtitle */}
-          <p className="text-xl mb-2 text-center text-blue-100 leading-relaxed max-w-4xl mx-auto">
-            Formez-vous aux technologies d'avenir pour révolutionner l'éducation
-          </p>
-
-          {/* Badges */}
-          <div className="flex flex-wrap justify-center gap-4">
-            <span className="bg-white/20 backdrop-blur-sm text-white px-8 py-2 rounded-lg font-medium flex items-center group hover:bg-white/30 transition-all duration-300 border border-white/10">
-              <Clock className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform" />
-              Temps Normal
-            </span>
-            <span className="bg-blue-500/80 backdrop-blur-sm text-white px-8 py-2 rounded-lg font-medium flex items-center group hover:bg-blue-600 transition-all duration-300 border border-blue-400/30">
-              <Clock className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform" />
-              Temps Aménagé
-            </span>
-            <a href='#programme' className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-8 rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 inline-flex items-center group">
-              <Rocket className="h-5 w-5 mr-2 group-hover:rotate-12 transition-transform" />
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <a href='programme.jpeg' download={'Program'} className="group cursor-pointer bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg shadow-lg hover:shadow-3xl transition-all duration-300 transform hover:scale-105 inline-flex items-center">
+              <Rocket className="h-5 w-5 mr-3 group-hover:rotate-12 transition-transform" />
               Découvrir le Programme
+              <ArrowDown className="h-4 w-4 ml-2 group-hover:translate-y-1 transition-transform" />
+            </a>
+            <a href='https://candidature.umi.ac.ma/' target='_blank' className="group bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/20 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center">
+              <GraduationCap className="h-5 w-5 mr-3 group-hover:scale-110 transition-transform" />
+              Postuler Maintenant
             </a>
           </div>
-
+        </div>
+      </div>
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="flex flex-col items-center text-blue-300">
+          <span className="text-sm mb-2">Explorer</span>
+          <ArrowDown className="h-5 w-5" />
         </div>
       </div>
     </section>
