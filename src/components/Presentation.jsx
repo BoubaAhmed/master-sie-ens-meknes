@@ -21,7 +21,8 @@ import {
   CheckCircle2,
   School,
   MapPin,
-  Bot
+  Bot,
+  Building2
 } from 'lucide-react';
 
 const Presentation = () => {
@@ -158,10 +159,10 @@ const Presentation = () => {
   };
 
   const stats = [
-    { value: "95%", label: "Taux d'insertion professionnelle", color: "emerald" },
-    { value: "25+", label: "Partenaires industriels et académiques", color: "blue" },
-    { value: "15", label: "Années d'expérience en formation", color: "violet" },
-    { value: "100%", label: "Encadrement personnalisé", color: "orange" }
+    { value: "4 600+", label: "Étudiants Inscrits", icon: <GraduationCap className="w-6 h-6 text-emerald-500" /> },
+    { value: "93+", label: "Enseignants", icon: <Users className="w-6 h-6 text-blue-500" /> },
+    { value: "33+", label: "Administratifs", icon: <Briefcase className="w-6 h-6 text-violet-500" /> },
+    { value: "17+", label: "Filières", icon: <Building2 className="w-6 h-6 text-orange-500" /> },
   ];
 
   return (
