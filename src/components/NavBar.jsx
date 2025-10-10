@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Home, Info, BookOpen, FileText, Newspaper, Mail } from "lucide-react";
+import { Home, Info, BookOpen, FileText, Newspaper, Mail, Bell } from "lucide-react";
 import logo from '../../public/SIE_logo.png';
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,6 +17,7 @@ const NavBar = () => {
   const menuItems = [
     { id: "accueil", label: "Accueil", icon: Home },
     { id: "presentation", label: "Présentation", icon: Info },
+    { id: "announcements", label: "Annonces", icon: Bell },
     { id: "programme", label: "Programme", icon: BookOpen },
     { id: "admission", label: "Admission", icon: FileText },
     { id: "activites", label: "Activités", icon: Newspaper },
