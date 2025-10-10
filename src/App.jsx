@@ -11,6 +11,7 @@ import Activities from './components/Activities';
 import { useEffect, useState } from 'react';
 import { ChevronUp } from 'lucide-react';
 import Gallery from './components/Gallery';
+import Announcements from './components/Announcements';
 // const bgImage = "https://images.pexels.com/photos/7972326/pexels-photo-7972326.jpeg";
 
 const App = () => {
@@ -55,7 +56,10 @@ const App = () => {
         <section id="presentation" className="scroll-mt-12">
           <Presentation />
         </section>
-        <section id="gallery" className="hidden md:block scroll-mt-12">
+        <section id="announcements" className="scroll-mt-12">
+          <Announcements />
+        </section>
+        <section id="gallery" className=" scroll-mt-12">
           <Gallery />
         </section>
         <section id="programme" className="scroll-mt-12">
@@ -64,7 +68,7 @@ const App = () => {
         <section id="admission" className="scroll-mt-12">
           <Admission />
         </section>
-        <section id="activites" className="hidden md:block scroll-mt-12">
+        <section id="activites" className="scroll-mt-12">
           <Activities />
         </section>
         {/* <section id="actualites" className="scroll-mt-12">
