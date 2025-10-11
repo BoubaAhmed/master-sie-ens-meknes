@@ -1,78 +1,41 @@
 import { useState, useEffect, useRef } from 'react';
-import { Camera, X, Users2, Building, GraduationCap, Microscope, ArrowRight, ArrowLeft, MapPin, Home, Cpu, Wifi } from "lucide-react";
+import { X, Users2, Building, GraduationCap, Microscope, ArrowRight, ArrowLeft, MapPin, Home, Cpu, Wifi } from "lucide-react";
 
 import gallery1 from "../assets/ens/3L1A8538.jpg";
 import gallery2 from "../assets/ens/3L1A8412.jpg";
 import gallery3 from "../assets/ens/ens.jpg";
 import gallery4 from "../assets/ens/salle-bloc.jpg";
 import gallery5 from "../assets/ens/grand-salle-bloc-d.jpg";
+import { iconMap } from '../utils/iconsMap';
+import galleryData from '../data/galleryData.json';
 
-const galleryImages = [
-    {
-        image: gallery1,
-        title: "Salle de Cours Magistraux",
-        description: "Amphithéâtre moderne équipé de vidéoprojecteurs haute définition et système audio professionnel pour un apprentissage optimal.",
-        category: "Salles Cours & TD",
-        icon: <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />,
-        location: "Bâtiment Principal - Étage 1",
-        capacity: "120 places",
-    },
-    {
-        image: gallery2,
-        title: "Salle de Travaux Dirigés",
-        description: "Espace collaboratif conçu pour les travaux en petits groupes avec tableaux interactifs et mobilier modulable.",
-        category: "Salles Cours & TD",
-        icon: <Users2 className="h-4 w-4 sm:h-5 sm:w-5" />,
-        location: "Bâtiment Principal - Étage 2",
-        capacity: "30 places",
-    },
-    {
-        image: gallery3,
-        title: "Laboratoire Informatique",
-        description: "Laboratoire équipé de stations de travail performantes dédiées au développement et à l'expérimentation en intelligence artificielle.",
-        category: "Salle TP",
-        icon: <Cpu className="h-4 w-4 sm:h-5 sm:w-5" />,
-        location: "Bâtiment des Sciences - RDC",
-        capacity: "25 postes",
-    },
-    {
-        image: gallery4,
-        title: "Salle de TP Électronique",
-        description: "Espace spécialisé pour les travaux pratiques d'électronique et IoT, équipé d'oscilloscopes et matériel Arduino/Raspberry Pi.",
-        category: "Salle TP",
-        icon: <Microscope className="h-4 w-4 sm:h-5 sm:w-5" />,
-        location: "Bâtiment Technique - Étage 1",
-        capacity: "20 postes",
-    },
-    {
-        image: gallery5,
-        title: "Hall Principal & Accueil",
-        description: "Espace d'accueil moderne avec zone de détente, bornes interactives et espace de coworking pour les étudiants.",
-        category: "Infrastructure",
-        icon: <Home className="h-4 w-4 sm:h-5 sm:w-5" />,
-        location: "Bâtiment Principal - Hall",
-        capacity: "Espace commun",
-    },
-    {
-        image: gallery1,
-        title: "Salle de Réseaux & Télécoms",
-        description: "Laboratoire spécialisé dans les réseaux informatiques et télécommunications avec équipements Cisco et simulateurs réseau.",
-        category: "Salle TP",
-        icon: <Wifi className="h-4 w-4 sm:h-5 sm:w-5" />,
-        location: "Bâtiment des Sciences - Étage 1",
-        capacity: "18 postes",
-    }
-];
+const images = {
+    "3L1A8538.jpg": gallery1,
+    "3L1A8412.jpg": gallery2,
+    "ens.jpg": gallery3,
+    "salle-bloc.jpg": gallery4,
+    "grand-salle-bloc-d.jpg": gallery5
+};
 
 export default function Gallery() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const [isTransitioning, setIsTransitioning] = useState(false);
-    const [isModalOpen, setIsModalOpen] = useState(false); // 🆕
-  const [selectedImage, setSelectedImage] = useState(null); // 🆕
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
     const carouselRef = useRef(null);
 
-    // Auto-play functionality
+    const galleryImages = galleryData.map((item) => ({
+        ...item,
+        image: images[item.image],
+        icon: iconMap[item.icon]
+            ? (() => {
+                const IconComponent = iconMap[item.icon];
+                return <IconComponent className="h-4 w-4 sm:h-5 sm:w-5" />;
+            })()
+            : null,
+    }));
+
     useEffect(() => {
         if (!isAutoPlaying || isTransitioning) return;
 
@@ -94,7 +57,7 @@ export default function Gallery() {
     const nextSlide = () => {
         if (isTransitioning) return;
         smoothTransition(() => {
-        setCurrentIndex((prevIndex) => 
+        setCurrentIndex((prevIndex) =>
             prevIndex === galleryImages.length - 1 ? 0 : prevIndex + 1
         );
         });
@@ -103,7 +66,7 @@ export default function Gallery() {
     const prevSlide = () => {
         if (isTransitioning) return;
         smoothTransition(() => {
-        setCurrentIndex((prevIndex) => 
+        setCurrentIndex((prevIndex) =>
             prevIndex === 0 ? galleryImages.length - 1 : prevIndex - 1
         );
         });
@@ -129,41 +92,37 @@ export default function Gallery() {
     return (
         <section className="py-8 sm:py-12 md:py-16 w-full overflow-hidden" id="galerie">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6">
-            {/* Header */}
             <div className="text-center mb-8 sm:mb-12">
-            <div className="relative flex flex-col items-center justify-center text-center mb-6 sm:mb-8">
-                {/* Animated shapes - hidden on mobile for performance */}
-                <div className="hidden sm:block animate-pulse absolute w-3 h-3 sm:w-4 sm:h-4 bg-blue-400 rotate-45 top-1 left-1/4 opacity-60"></div>
-                <div className="hidden sm:block animate-pulse absolute w-3 h-3 sm:w-4 sm:h-4 bg-purple-500 top-0 right-1/4 opacity-40 rounded-sm"></div>
-                <div className="hidden md:block animate-pulse absolute w-5 h-5 bg-indigo-400 top-1/2 left-1/3 rotate-12 skew-y-6 opacity-50"></div>
-                <div className="hidden sm:block animate-pulse absolute w-3 h-3 bg-blue-500 bottom-2 right-1/3 opacity-70 rounded-md"></div>
+                <div className="relative flex flex-col items-center justify-center text-center mb-6 sm:mb-8">
+                    <div className="hidden sm:block animate-pulse absolute w-3 h-3 sm:w-4 sm:h-4 bg-blue-400 rotate-45 top-1 left-1/4 opacity-60"></div>
+                    <div className="hidden sm:block animate-pulse absolute w-3 h-3 sm:w-4 sm:h-4 bg-purple-500 top-0 right-1/4 opacity-40 rounded-sm"></div>
+                    <div className="hidden md:block animate-pulse absolute w-5 h-5 bg-indigo-400 top-1/2 left-1/3 rotate-12 skew-y-6 opacity-50"></div>
+                    <div className="hidden sm:block animate-pulse absolute w-3 h-3 bg-blue-500 bottom-2 right-1/3 opacity-70 rounded-md"></div>
 
-                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold flex flex-wrap items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
-                <Building className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-blue-500 flex-shrink-0" />
-                Infrastructures & Salles
-                </h2>
+                    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold flex flex-wrap items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
+                    <Building className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-blue-500 flex-shrink-0" />
+                    Infrastructures & Salles
+                    </h2>
 
-                <div className="mt-2 sm:mt-3 h-0.5 sm:h-1 w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-            </div>
-            <div className="text-gray-600 max-w-4xl mx-auto px-2">
-                <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-                Découvrez nos infrastructures modernes et nos salles spécialisées dédiées à l'apprentissage 
-                et à la recherche en intelligence artificielle et technologies numériques.
-                </p>
-            </div>
+                    <div className="mt-2 sm:mt-3 h-0.5 sm:h-1 w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                </div>
+                <div className="text-gray-600 max-w-4xl mx-auto px-2">
+                    <p className="text-sm sm:text-base md:text-lg leading-relaxed">
+                    Découvrez nos infrastructures modernes et nos salles spécialisées dédiées à l'apprentissage 
+                    et à la recherche en intelligence artificielle et technologies numériques.
+                    </p>
+                </div>
             </div>
 
-            {/* Custom Carousel */}
-            <div 
-            className="relative"
-            ref={carouselRef}
-            onMouseEnter={() => setIsAutoPlaying(false)}
-            onMouseLeave={() => setIsAutoPlaying(true)}
+            <div
+                className="relative"
+                ref={carouselRef}
+                onMouseEnter={() => setIsAutoPlaying(false)}
+                onMouseLeave={() => setIsAutoPlaying(true)}
             >
-            {/* Carousel Slide */}
             <div onClick={() => {
-              setSelectedImage(currentItem.image);
-              setIsModalOpen(true);
+                setSelectedImage(currentItem.image);
+                setIsModalOpen(true);
             }} className="group  cursor-pointer relative min-h-[300px] sm:min-h-[350px] md:min-h-[400px] lg:min-h-[450px] xl:min-h-[500px] w-full rounded-lg sm:rounded-xl overflow-hidden shadow-lg sm:shadow-xl">
                 <div className="absolute inset-0">
                 <img
@@ -178,7 +137,6 @@ export default function Gallery() {
                 }`} />
                 </div>
 
-                {/* Content Card - Main */}
                 <div className="max-w-7xl mx-auto absolute w-full h-full flex items-center justify-center px-3 sm:px-4 md:px-6">
                     <div className={`bg-white/10 backdrop-blur-sm sm:backdrop-blur-md rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 border border-white/20 max-w-xs sm:max-w-sm md:max-w-md w-full transition-all duration-500 ${
                         isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100 group-hover:hidden'
@@ -200,7 +158,6 @@ export default function Gallery() {
                         {currentItem.description}
                         </p>
 
-                        {/* Location */}
                         <div className="flex items-center gap-2 sm:gap-3 text-white/80">
                         <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-blue-400 flex-shrink-0" />
                         <span className="text-xs sm:text-sm truncate">
@@ -211,7 +168,6 @@ export default function Gallery() {
                 </div>
             </div>
 
-            {/* Navigation Arrows */}
             <button
                 onClick={prevSlide}
                 disabled={isTransitioning}
@@ -232,7 +188,6 @@ export default function Gallery() {
                 <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
             </button>
 
-            {/* Pagination Dots */}
             <div className="flex justify-center gap-1 sm:gap-2 absolute bottom-3 sm:bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 z-20">
                 {galleryImages.map((_, index) => (
                 <button
@@ -251,7 +206,6 @@ export default function Gallery() {
                 ))}
             </div>
 
-            {/* Slide Counter */}
             <div className="absolute top-3 sm:top-4 right-3 sm:right-4 z-20 bg-black/50 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm">
                 {currentIndex + 1} / {galleryImages.length}
             </div>
