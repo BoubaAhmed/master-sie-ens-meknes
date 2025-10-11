@@ -1,139 +1,12 @@
-import React from 'react';
-import { 
-  CheckCircle2, 
-  BookOpen, 
-  Code2, 
-  Brain, 
-  GraduationCap, 
-  Languages,
-  Lightbulb,
-  Database,
-  Network,
-  MessageSquare,
-  Cpu,
-  Shield,
-  Link2,
-  FileCode,
-  CircuitBoard,
-  Calendar,
-  Clock,
-  Award,
-  Target,
-  Bookmark,
-  Rocket,
-  Bot
-} from 'lucide-react';
+import { CheckCircle2, Calendar, Target, Bookmark, Rocket } from 'lucide-react';
+import semestersData from "../data/semesters.json";
+import { getColorClasses } from '../utils/colorUtils';
+import { iconMap } from '../utils/iconsMap';
 
 const Program = () => {
-  const semesters = [
-    {
-      id: 1,
-      title: "Semestre 1 - Fondamentaux",
-      subtitle: "Bases de l'IA et Développement",
-      color: "blue",
-      icon: Brain,
-      subjects: [
-        { name: "Intelligence artificielle et Apprentissage statistique", icon: Brain },
-        { name: "Développement mobile & web pour l'éducation", icon: Code2 },
-        { name: "Vision artificielle et traitement d'images", icon: Cpu },
-        { name: "Didactique générale et Ingénierie Pédagogique", icon: BookOpen },
-        { name: "Langues étrangères", icon: Languages },
-        { name: "Programmation avancée avec Python", icon: Code2 },
-        { name: "Soft skills et communication", icon: MessageSquare }
-      ]
-    },
-    {
-      id: 2,
-      title: "Semestre 2 - Approfondissement",
-      subtitle: "Data Science et Technologies Avancées",
-      color: "emerald",
-      icon: Database,
-      subjects: [
-        { name: "Data science et visualisation", icon: Database },
-        { name: "Base de données avancée et Big Data éducatif", icon: Database },
-        { name: "Systèmes Distribués et Applications Réparties", icon: Network },
-        { name: "Apprentissage profond (Deep Learning)", icon: Brain },
-        { name: "Psychologie de l'Intelligence", icon: Lightbulb },
-        { name: "Culture entrepreneuriale", icon: GraduationCap },
-        { name: "Méthodologie de recherche", icon: FileCode }
-      ]
-    },
-    {
-      id: 3,
-      title: "Semestre 3 - Spécialisation",
-      subtitle: "Applications Éducatives et Technologies Émergentes",
-      color: "violet",
-      icon: CircuitBoard,
-      subjects: [
-        { name: "NLP et ses Applications en Éducation", icon: MessageSquare },
-        { name: "Internet Of Things (IoT)", icon: Cpu },
-        { name: "Technologies Éducatives et Systèmes Tutoriels Intelligents", icon: BookOpen },
-        { name: "Recherche Opérationnelle", icon: Lightbulb },
-        { name: "Cryptographie et sécurité informatique", icon: Shield },
-        { name: "Robotique Éducative et Applications", icon: CircuitBoard },
-        { name: "Technologie Blockchain", icon: Link2 }
-      ]
-    },
-    {
-      id: 4,
-      title: "Semestre 4 - Projet & Recherche",
-      subtitle: "Projet de Fin d'Études",
-      color: "orange",
-      icon: FileCode,
-      isProject: true,
-      description: "Réalisation d'un projet de recherche ou de développement appliqué dans le domaine des systèmes intelligents pour l'éducation, sous la direction d'un enseignant-chercheur.",
-      objectives: [
-        "Appliquer les connaissances acquises dans un contexte réel",
-        "Développer une solution innovante pour l'éducation",
-        "Rédiger un mémoire scientifique de qualité",
-        "Présenter et défendre son travail devant un jury"
-      ]
-    }
-  ];
-
-  const getColorClasses = (color) => {
-    const colors = {
-      blue: {
-        bg: 'bg-blue-50',
-        text: 'text-blue-700',
-        icon: 'text-blue-600',
-        gradient: 'from-blue-500 to-blue-600',
-        border: 'border-blue-200',
-        light: 'bg-blue-25'
-      },
-      emerald: {
-        bg: 'bg-emerald-50',
-        text: 'text-emerald-700',
-        icon: 'text-emerald-600',
-        gradient: 'from-emerald-500 to-emerald-600',
-        border: 'border-emerald-200',
-        light: 'bg-emerald-25'
-      },
-      violet: {
-        bg: 'bg-violet-50',
-        text: 'text-violet-700',
-        icon: 'text-violet-600',
-        gradient: 'from-violet-500 to-violet-600',
-        border: 'border-violet-200',
-        light: 'bg-violet-25'
-      },
-      orange: {
-        bg: 'bg-orange-50',
-        text: 'text-orange-700',
-        icon: 'text-orange-600',
-        gradient: 'from-orange-500 to-orange-600',
-        border: 'border-orange-200',
-        light: 'bg-orange-25'
-      }
-    };
-    return colors[color] || colors.blue;
-  };
-
   return (
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        
-        {/* Hero Header */}
         <div className="text-center mb-16">
           <div className="relative flex flex-col items-center justify-center text-center mb-8 px-4 sm:px-6 md:px-8">
             <div className="absolute w-2 h-2 sm:w-3 sm:h-3 bg-blue-400 rounded-full top-0 left-1/3 opacity-70"></div>
@@ -160,9 +33,9 @@ const Program = () => {
         <section className="mb-16">
           <div className="space-y-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {semesters.slice(0, 2).map(semester => {
+              {semestersData.slice(0, 2).map(semester => {
                 const colorClasses = getColorClasses(semester.color);
-                const IconComponent = semester.icon;
+                const IconComponent = iconMap[semester.icon];
                 
                 return (
                   <div
@@ -183,19 +56,22 @@ const Program = () => {
 
                     <div className="p-4">
                       <div className="space-y-2">
-                        {semester.subjects.map((subject, index) => (
-                          <div
-                            key={index}
-                            className="flex items-start space-x-3 py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200"
-                          >
-                            <div className={`p-1 rounded ${colorClasses.bg} flex-shrink-0`}>
-                              <subject.icon className={`h-4 w-4 ${colorClasses.icon}`} />
+                        {semester.subjects.map((subject, index) => {
+                          const SubjectIcon = iconMap[subject.icon];
+                          return (
+                            <div
+                              key={index}
+                              className="flex items-start space-x-3 py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                            >
+                              <div className={`p-1 rounded ${colorClasses.bg} flex-shrink-0`}>
+                                <SubjectIcon className={`h-4 w-4 ${colorClasses.icon}`} />
+                              </div>
+                              <span className="text-gray-700 text-sm leading-relaxed flex-1">
+                                {subject.name}
+                              </span>
                             </div>
-                            <span className="text-gray-700 text-sm leading-relaxed flex-1">
-                              {subject.name}
-                            </span>
-                          </div>
-                        ))}
+                          )
+                      })}
                       </div>
                     </div>
                   </div>
@@ -203,9 +79,10 @@ const Program = () => {
               })}
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {semesters.slice(2).map(semester => {
+              {semestersData.slice(2).map(semester => {
                 const colorClasses = getColorClasses(semester.color);
-                const IconComponent = semester.icon;
+                const IconComponent = iconMap[semester.icon];
+
 
                 return (
                   <div
@@ -249,7 +126,6 @@ const Program = () => {
                             </ul>
                           </div>
 
-                          {/* Timeline */}
                           <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
                             <h4 className="font-bold text-blue-800 text-sm mb-3 flex items-center">
                               <Calendar className="h-4 w-4 mr-2" />
@@ -276,21 +152,23 @@ const Program = () => {
                           </div>
                         </div>
                       ) : (
-                        /* Regular Semester Subjects */
                         <div className="space-y-2">
-                          {semester.subjects.map((subject, index) => (
-                            <div
-                              key={index}
-                              className="flex items-start space-x-3 py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200"
-                            >
-                              <div className={`p-1 rounded ${colorClasses.bg} flex-shrink-0`}>
-                                <subject.icon className={`h-4 w-4 ${colorClasses.icon}`} />
+                          {semester.subjects.map((subject, index) => {
+                            const SubjectIcon = iconMap[subject.icon];
+                            return (
+                              <div
+                                key={index}
+                                className="flex items-start space-x-3 py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                              >
+                                <div className={`p-1 rounded ${colorClasses.bg} flex-shrink-0`}>
+                                  <SubjectIcon className={`h-4 w-4 ${colorClasses.icon}`} />
+                                </div>
+                                <span className="text-gray-700 text-sm leading-relaxed flex-1">
+                                  {subject.name}
+                                </span>
                               </div>
-                              <span className="text-gray-700 text-sm leading-relaxed flex-1">
-                                {subject.name}
-                              </span>
-                            </div>
-                          ))}
+                            )
+                          })}
                         </div>
                       )}
                     </div>
@@ -301,7 +179,6 @@ const Program = () => {
           </div>
         </section>
 
-        {/* Pedagogical Approach Section */}
         <section className="mb-16 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl shadow-xl overflow-hidden">
           <div className="p-8">
             <div className="text-center mb-8">
