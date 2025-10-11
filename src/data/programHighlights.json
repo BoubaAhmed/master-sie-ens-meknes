@@ -1,0 +1,26 @@
+[
+    {
+        "icon": "Award",
+        "title": "Formation d'excellence",
+        "description": "Programme unique combinant IA et sciences de l'éducation",
+        "color": "blue"
+    },
+    {
+        "icon": "Calendar",
+        "title": "Durée",
+        "description": "2 années (4 semestres) avec stages professionnels",
+        "color": "emerald"
+    },
+    {
+        "icon": "GraduationCap",
+        "title": "Approche pédagogique",
+        "description": "Équilibre théorie, pratique et projets professionnels",
+        "color": "violet"
+    },
+    {
+        "icon": "UserCheck",
+        "title": "Encadrement",
+        "description": "Enseignants-chercheurs et professionnels du secteur",
+        "color": "orange"
+    }
+]

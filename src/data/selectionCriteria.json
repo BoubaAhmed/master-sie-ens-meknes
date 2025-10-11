@@ -1,0 +1,26 @@
+[
+    {
+        "percentage": 50,
+        "label": "Dossier académique",
+        "icon": "FileCheck",
+        "color": "blue"
+    },
+    {
+        "percentage": 30,
+        "label": "Entretien de motivation",
+        "icon": "Users",
+        "color": "emerald"
+    },
+    {
+        "percentage": 15,
+        "label": "Expérience professionnelle",
+        "icon": "Briefcase",
+        "color": "violet"
+    },
+    {
+        "percentage": 5,
+        "label": "Projets personnels",
+        "icon": "Lightbulb",
+        "color": "orange"
+    }
+]

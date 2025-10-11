@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "title": "Inscriptions Rentrée 2024",
+        "description": "Les inscriptions pour la rentrée académique 2024-2025 sont ouvertes. Dépêchez-vous de postuler !",
+        "date": "15 Septembre 2024",
+        "time": "08:00 - 17:00",
+        "location": "Secrétariat du Master",
+        "category": "Administratif",
+        "urgency": "high",
+        "link": "https://google.com"
+    },
+    {
+        "id": 2,
+        "title": "Workshop Intelligence Artificielle",
+        "description": "Participez à notre workshop sur les avancées récentes en IA avec des experts du domaine.",
+        "date": "20 Octobre 2024",
+        "time": "14:00 - 18:00",
+        "location": "Amphithéâtre A",
+        "category": "Académique",
+        "urgency": "medium"
+    },
+    {
+        "id": 3,
+        "title": "Date Limite Projets de Fin d'Études",
+        "description": "Rappel : la date limite pour le dépôt des projets de fin d'études est fixée au 30 Novembre.",
+        "date": "30 Novembre 2024",
+        "time": "23:59",
+        "location": "Plateforme en ligne",
+        "category": "Académique",
+        "urgency": "high"
+    },
+    {
+        "id": 4,
+        "title": "Conférence sur l'Éthique de l'IA",
+        "description": "Venez assister à une conférence exclusive sur les enjeux éthiques de l'intelligence artificielle.",
+        "date": "5 Décembre 2024",
+        "time": "10:00 - 12:00",
+        "location": "Salle de Conférence",
+        "category": "Événement",
+        "urgency": "medium"
+    },
+    {
+        "id": 5,
+        "title": "Période de Stages Entreprises",
+        "description": "La période de stages en entreprise pour le semestre de printemps débute le 15 Janvier 2025.",
+        "date": "15 Janvier 2025",
+        "time": "Toute la journée",
+        "location": "Service des Stages",
+        "category": "Professionnel",
+        "urgency": "low"
+    },
+    {
+        "id": 6,
+        "title": "Session de Rattrapage Examens",
+        "description": "Les sessions de rattrapage pour les examens du premier semestre seront organisées en Février.",
+        "date": "10 Février 2025",
+        "time": "09:00 - 12:00",
+        "location": "Salles dédiées",
+        "category": "Académique",
+        "urgency": "medium"
+    },
+    {
+        "id": 7,
+        "title": "Soutenance des Projets",
+        "description": "Les soutenances des projets de fin d'études auront lieu du 15 au 20 Mars 2025.",
+        "date": "15 Mars 2025",
+        "time": "09:00 - 17:00",
+        "location": "Salles de Soutenance",
+        "category": "Académique",
+        "urgency": "medium"
+    },
+    {
+        "id": 8,
+        "title": "Journée Portes Ouvertes",
+        "description": "Découvrez notre Master lors de la journée portes ouvertes le 25 Avril 2025.",
+        "date": "25 Avril 2025",
+        "time": "10:00 - 16:00",
+        "location": "Campus Principal",
+        "category": "Événement",
+        "urgency": "low"
+    }
+]

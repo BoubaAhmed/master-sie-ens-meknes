@@ -1,0 +1,59 @@
+
+[
+    {
+        "step": 1,
+        "title": "Préparation du dossier",
+        "description":"Rassemblez les documents nécessaires pour constituer un dossier complet et compétitif.",
+        "icon": "FileText",
+        "color": "blue",
+        "details": [
+            "Copie certifiée du diplôme de licence",
+            "Relevés de notes de la licence",
+            "CV détaillé et actualisé",
+            "Lettre de motivation personnalisée",
+            "Copie de la carte d'identité nationale"
+        ]
+    },
+    {
+        "step": 2,
+        "title": "Dépôt en ligne",
+        "description":"Complétez votre candidature sur notre plateforme dédiée du 11 août au 7 septembre 2025.",
+        "icon": "Upload",
+        "color": "emerald",
+        "details": [
+            "Accédez à la plateforme de candidature",
+            "Créez votre compte personnel sécurisé",
+            "Remplissez le formulaire en ligne",
+            "Téléchargez les documents numérisés",
+            "Validez et soumettez votre candidature"
+        ]
+    },
+    {
+        "step": 3,
+        "title": "Examen du dossier",
+        "description":"Notre commission pédagogique examine chaque dossier avec attention et expertise.",
+        "icon": "Search",
+        "color": "violet",
+        "details": [
+            "Évaluation approfondie des notes académiques",
+            "Analyse détaillée de la lettre de motivation",
+            "Examen du parcours et expériences professionnelles",
+            "Appréciation des lettres de recommandation",
+            "Présélection des candidats les plus prometteurs"
+        ]
+    },
+    {
+        "step": 4,
+        "title": "Entretien de sélection",
+        "description":"Rencontre avec notre jury pour évaluer votre motivation et votre potentiel.",
+        "icon": "Users",
+        "color": "orange",
+        "details": [
+            "Test de motivation et d'engagement",
+            "Évaluation des compétences techniques",
+            "Discussion sur votre projet professionnel",
+            "Présentation de vos attentes et ambitions",
+            "Échange avec les membres du jury"
+        ]
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Ouverture des candidatures",
+        "date": "11 août 2025",
+        "icon": "Calendar",
+        "status": "upcoming",
+        "description": "Début de la période de dépôt des dossiers"
+    },
+    {
+        "title": "Clôture des candidatures",
+        "date": "7 septembre 2025",
+        "icon": "Clock",
+        "status": "upcoming",
+        "description": "Date limite impérative pour le dépôt"
+    },
+    {
+        "title": "Entretiens de sélection",
+        "date": "15-20 septembre 2025",
+        "icon": "UserCheck",
+        "status": "upcoming",
+        "description": "Convocation des candidats présélectionnés"
+    },
+    {
+        "title": "Publication des résultats",
+        "date": "25 septembre 2025",
+        "icon": "Megaphone",
+        "status": "upcoming",
+        "description": "Annonce des candidats retenus"
+    },
+    {
+        "title": "Inscription administrative",
+        "date": "1-10 octobre 2025",
+        "icon": "Edit3",
+        "status": "upcoming",
+        "description": "Finalisation de l'inscription"
+    },
+    {
+        "title": "Rentrée universitaire",
+        "date": "15 octobre 2025",
+        "icon": "GraduationCap",
+        "status": "upcoming",
+        "description": "Début des cours et intégration"
+    }
+]

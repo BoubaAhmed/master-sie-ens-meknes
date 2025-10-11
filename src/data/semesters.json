@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "title": "Semestre 1 - Fondamentaux",
+        "subtitle": "Bases de l'IA et Développement",
+        "color": "blue",
+        "icon": "Brain",
+        "subjects": [
+            { "name": "Intelligence artificielle et Apprentissage statistique", "icon": "Brain" },
+            { "name": "Développement mobile & web pour l'éducation", "icon": "Code2" },
+            { "name": "Vision artificielle et traitement d'images", "icon": "Cpu" },
+            { "name": "Didactique générale et Ingénierie Pédagogique", "icon": "BookOpen" },
+            { "name": "Langues étrangères", "icon": "Languages" },
+            { "name": "Programmation avancée avec Python", "icon": "Code2" },
+            { "name": "Soft skills et communication", "icon": "MessageSquare" }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Semestre 2 - Approfondissement",
+        "subtitle": "Data Science et Technologies Avancées",
+        "color": "emerald",
+        "icon": "Database",
+        "subjects": [
+            { "name": "Data science et visualisation", "icon": "Database" },
+            { "name": "Base de données avancée et Big Data éducatif", "icon": "Database" },
+            { "name": "Systèmes Distribués et Applications Réparties", "icon": "Network" },
+            { "name": "Apprentissage profond (Deep Learning)", "icon": "Brain" },
+            { "name": "Psychologie de l'Intelligence", "icon": "Lightbulb" },
+            { "name": "Culture entrepreneuriale", "icon": "GraduationCap" },
+            { "name": "Méthodologie de recherche", "icon": "FileCode" }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Semestre 3 - Spécialisation",
+        "subtitle": "Applications Éducatives et Technologies Émergentes",
+        "color": "violet",
+        "icon": "CircuitBoard",
+        "subjects": [
+            { "name": "NLP et ses Applications en Éducation", "icon": "MessageSquare" },
+            { "name": "Internet Of Things (IoT)", "icon": "Cpu" },
+            { "name": "Technologies Éducatives et Systèmes Tutoriels Intelligents", "icon": "BookOpen" },
+            { "name": "Recherche Opérationnelle", "icon": "Lightbulb" },
+            { "name": "Cryptographie et sécurité informatique", "icon": "Shield" },
+            { "name": "Robotique Éducative et Applications", "icon": "CircuitBoard" },
+            { "name": "Technologie Blockchain", "icon": "Link2" }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Semestre 4 - Projet & Recherche",
+        "subtitle": "Projet de Fin d'Études",
+        "color": "orange",
+        "icon": "FileCode",
+        "isProject": true,
+        "description": "Réalisation d'un projet de recherche ou de développement appliqué dans le domaine des systèmes intelligents pour l'éducation, sous la direction d'un enseignant-chercheur.",
+        "objectives": [
+            "Appliquer les connaissances acquises dans un contexte réel",
+            "Développer une solution innovante pour l'éducation",
+            "Rédiger un mémoire scientifique de qualité",
+            "Présenter et défendre son travail devant un jury"
+        ]
+    }
+]

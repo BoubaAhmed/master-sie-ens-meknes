@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Licence en éducation",
+        "icon": "GraduationCap",
+        "color": "blue",
+        "specialities": [
+            "Spécialité informatique",
+            "Spécialité Mathématiques",
+            "Sciences de l'éducation",
+            "Technologies éducatives"
+        ]
+    },
+    {
+        "title": "Licence des études fondamentales",
+        "icon": "BookOpen",
+        "color": "emerald",
+        "specialities": [
+            "Spécialité Mathématiques",
+            "Spécialité Informatique",
+            "Mathématiques et Informatique",
+            "Sciences et technologies"
+        ]
+    },
+    {
+        "title": "Diplômes équivalents",
+        "icon": "Award",
+        "color": "violet",
+        "specialities": [
+            "Licence en ingénierie",
+            "Diplômes étrangers équivalents",
+            "Validation des acquis professionnels"
+        ]
+    }
+]

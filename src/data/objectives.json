@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "Brain",
+        "description": "Maîtriser les concepts fondamentaux de l'intelligence artificielle et leurs applications dans le domaine éducatif.",
+        "color": "blue"
+    },
+    {
+        "icon": "Code2",
+        "description": "Acquérir les compétences nécessaires pour concevoir, développer et évaluer des systèmes intelligents adaptés aux besoins éducatifs.",
+        "color": "emerald"
+    },
+    {
+        "icon": "Lightbulb",
+        "description": "Contribuer à l'innovation et à la recherche dans le domaine du numérique éducatif et des technologies intelligentes.",
+        "color": "violet"
+    }
+]

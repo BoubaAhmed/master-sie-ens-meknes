@@ -1,0 +1,38 @@
+[
+    {
+        "icon": "BarChart3",
+        "title": "Analyste de données éducatives",
+        "description": "Exploiter les données pour améliorer les processus d'apprentissage et les résultats des élèves.",
+        "color": "blue"
+    },
+    {
+        "icon": "BookOpen",
+        "title": "Concepteur de logiciels éducatifs",
+        "description": "Créer des programmes et applications intégrant l'IA pour personnaliser l'expérience éducative.",
+        "color": "emerald"
+    },
+    {
+        "icon": "Microscope",
+        "title": "Chercheur académique",
+        "description": "Contribuer à l'avancement des connaissances en IA éducative par la recherche et publications.",
+        "color": "violet"
+    },
+    {
+        "icon": "Users",
+        "title": "Conseiller en technologie éducative",
+        "description": "Guider l'intégration de solutions d'IA dans les curriculums et pratiques pédagogiques.",
+        "color": "orange"
+    },
+    {
+        "icon": "Rocket",
+        "title": "Entrepreneur en EdTech",
+        "description": "Lancer des startups développant des outils innovants pour l'éducation basés sur l'IA.",
+        "color": "pink"
+    },
+    {
+        "icon": "Target",
+        "title": "Responsable innovation pédagogique",
+        "description": "Piloter la transformation digitale des établissements éducatifs avec les technologies IA.",
+        "color": "indigo"
+    }
+]
