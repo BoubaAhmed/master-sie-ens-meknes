@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Home, Info, BookOpen, FileText, Newspaper, Mail, Bell } from "lucide-react";
-import logo from '../../public/SIE_logo.png';
+
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -48,7 +48,7 @@ const NavBar = () => {
             <div
               className={`flex items-center justify-center w-12 h-12  text-[15px] font-bold`}
             >
-              <img src={logo} alt="" />
+              <img src="/SIE_logo.png" alt="" />
             </div>
             <div className="hidden sm:block">
               <h1
@@ -69,7 +69,7 @@ const NavBar = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`flex items-center gap-1 px-2 py-1 text-sm transition-colors ${
+                  className={`flex items-center hover:cursor-pointer cursor-pointer gap-1 px-2 py-1 text-sm transition-colors ${
                     scrolled
                       ? "text-gray-800 hover:text-blue-600"
                       : "text-white hover:text-blue-400"
