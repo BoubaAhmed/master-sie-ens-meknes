@@ -2,14 +2,24 @@ import { useState, useEffect, useRef } from 'react';
 import { CalendarDays, Users, Lightbulb, Clock, MapPin, ArrowRight, ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
 import activitiesData from '../data/activities.json';
 
-import aa from "../assets/streamlit2.jpg";
-import bb from "../assets/chatbots.jpg";
-import cc from "../assets/224A9600.JPG";
+import act1 from "../assets/ens/Activities/act1.jpg";
+import act2 from "../assets/ens/Activities/act2.jpg";
+import act3 from "../assets/ens/Activities/act3.jpg";
+import act4 from "../assets/ens/Activities/act4.jpg";
+import act5 from "../assets/ens/Activities/act5.jpg";
+import act6 from "../assets/ens/Activities/act6.jpg";
+import act7 from "../assets/ens/Activities/act7.jpg";
+import act8 from "../assets/ens/Activities/act8.jpg";
 
 const imageMap = {
-  "../assets/streamlit2.jpg": aa,
-  "../assets/chatbots.jpg": bb,
-  "../assets/224A9600.JPG": cc
+  "../assets/ens/Activities/act1.jpg": act1,
+  "../assets/ens/Activities/act2.jpg": act2,
+  "../assets/ens/Activities/act3.jpg": act3,
+  "../assets/ens/Activities/act4.jpg": act4,
+  "../assets/ens/Activities/act5.jpg": act5,
+  "../assets/ens/Activities/act6.jpg": act6,
+  "../assets/ens/Activities/act7.jpg": act7,
+  "../assets/ens/Activities/act8.jpg": act8
 };
 
 const iconMap = {
