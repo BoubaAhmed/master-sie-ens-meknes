@@ -1,15 +1,14 @@
 import React from 'react';
-import { 
-  GraduationCap, 
-  MapPin, 
-  Mail, 
-  Phone, 
+import {
+  GraduationCap,
+  MapPin,
+  Mail,
+  Phone,
   ExternalLink,
   Facebook,
   Twitter,
   Linkedin,
   Youtube,
-  ArrowRight,
   BookOpen,
   Users,
   Rocket,
@@ -143,16 +142,12 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-blue-800">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Copyright */}
             <p className="text-blue-300 text-sm text-center md:text-left">
               &copy; {currentYear} Master SIE  | École Normale Supérieure de Meknès. Tous droits réservés.
             </p>
-            
-            {/* Legal Links */}
             <div className="flex space-x-6">
               <a href="#" className="text-blue-300 hover:text-white text-sm transition-colors">
                 Confidentialité
