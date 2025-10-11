@@ -1,162 +1,12 @@
 import React from 'react';
-import { 
-  Brain, 
-  Code2, 
-  Lightbulb,
-  BarChart3,
-  BookOpen,
-  Users,
-  Rocket,
-  GraduationCap,
-  Microscope,
-  Briefcase,
-  Target,
-  Globe,
-  FlaskConical,
-  Handshake,
-  Award,
-  Calendar,
-  Clock,
-  UserCheck,
-  CheckCircle2,
-  School,
-  MapPin,
-  Bot,
-  Building2
-} from 'lucide-react';
+import { Users, GraduationCap, Briefcase, Target, CheckCircle2, MapPin, Bot, Building2 } from 'lucide-react';
+import { getColorClasses } from '../utils/colorUtils';
+import objectives from '../data/objectives.json';
+import programHighlights from '../data/programHighlights.json';
+import careerOpportunities from '../data/careerOpportunities.json';
+import { iconMap } from '../utils/iconsMap';
 
 const Presentation = () => {
-  const objectives = [
-    {
-      icon: Brain,
-      description: "Maîtriser les concepts fondamentaux de l'intelligence artificielle et leurs applications dans le domaine éducatif.",
-      color: "blue"
-    },
-    {
-      icon: Code2,
-      description: "Acquérir les compétences nécessaires pour concevoir, développer et évaluer des systèmes intelligents adaptés aux besoins éducatifs.",
-      color: "emerald"
-    },
-    {
-      icon: Lightbulb,
-      description: "Contribuer à l'innovation et à la recherche dans le domaine du numérique éducatif et des technologies intelligentes.",
-      color: "violet"
-    }
-  ];
-
-  const careerOpportunities = [
-    {
-      icon: BarChart3,
-      title: "Analyste de données éducatives",
-      description: "Exploiter les données pour améliorer les processus d'apprentissage et les résultats des élèves.",
-      color: "blue"
-    },
-    {
-      icon: BookOpen,
-      title: "Concepteur de logiciels éducatifs",
-      description: "Créer des programmes et applications intégrant l'IA pour personnaliser l'expérience éducative.",
-      color: "emerald"
-    },
-    {
-      icon: Microscope,
-      title: "Chercheur académique",
-      description: "Contribuer à l'avancement des connaissances en IA éducative par la recherche et publications.",
-      color: "violet"
-    },
-    {
-      icon: Users,
-      title: "Conseiller en technologie éducative",
-      description: "Guider l'intégration de solutions d'IA dans les curriculums et pratiques pédagogiques.",
-      color: "orange"
-    },
-    {
-      icon: Rocket,
-      title: "Entrepreneur en EdTech",
-      description: "Lancer des startups développant des outils innovants pour l'éducation basés sur l'IA.",
-      color: "pink"
-    },
-    {
-      icon: Target,
-      title: "Responsable innovation pédagogique",
-      description: "Piloter la transformation digitale des établissements éducatifs avec les technologies IA.",
-      color: "indigo"
-    }
-  ];
-
-  const programHighlights = [
-    {
-      icon: Award,
-      title: "Formation d'excellence",
-      description: "Programme unique combinant IA et sciences de l'éducation",
-      color: "blue"
-    },
-    {
-      icon: Calendar,
-      title: "Durée",
-      description: "2 années (4 semestres) avec stages professionnels",
-      color: "emerald"
-    },
-    {
-      icon: GraduationCap,
-      title: "Approche pédagogique",
-      description: "Équilibre théorie, pratique et projets professionnels",
-      color: "violet"
-    },
-    {
-      icon: UserCheck,
-      title: "Encadrement",
-      description: "Enseignants-chercheurs et professionnels du secteur",
-      color: "orange"
-    }
-  ];
-
-  const getColorClasses = (color) => {
-    const colors = {
-      blue: {
-        bg: 'bg-blue-50',
-        text: 'text-blue-700',
-        icon: 'text-blue-600',
-        gradient: 'from-blue-500 to-blue-600',
-        light: 'bg-blue-25'
-      },
-      emerald: {
-        bg: 'bg-emerald-50',
-        text: 'text-emerald-700',
-        icon: 'text-emerald-600',
-        gradient: 'from-emerald-500 to-emerald-600',
-        light: 'bg-emerald-25'
-      },
-      violet: {
-        bg: 'bg-violet-50',
-        text: 'text-violet-700',
-        icon: 'text-violet-600',
-        gradient: 'from-violet-500 to-violet-600',
-        light: 'bg-violet-25'
-      },
-      orange: {
-        bg: 'bg-orange-50',
-        text: 'text-orange-700',
-        icon: 'text-orange-600',
-        gradient: 'from-orange-500 to-orange-600',
-        light: 'bg-orange-25'
-      },
-      pink: {
-        bg: 'bg-pink-50',
-        text: 'text-pink-700',
-        icon: 'text-pink-600',
-        gradient: 'from-pink-500 to-pink-600',
-        light: 'bg-pink-25'
-      },
-      indigo: {
-        bg: 'bg-indigo-50',
-        text: 'text-indigo-700',
-        icon: 'text-indigo-600',
-        gradient: 'from-indigo-500 to-indigo-600',
-        light: 'bg-indigo-25'
-      }
-    };
-    return colors[color] || colors.blue;
-  };
 
   const stats = [
     { value: "4 600+", label: "Étudiants Inscrits", icon: <GraduationCap className="w-6 h-6 text-emerald-500" /> },
@@ -202,8 +52,8 @@ const Presentation = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {programHighlights.map((highlight, index) => {
               const colorClasses = getColorClasses(highlight.color);
-              const IconComponent = highlight.icon;
-              
+              const IconComponent = iconMap[highlight.icon];
+
               return (
                 <div
                   key={index}
@@ -251,7 +101,7 @@ const Presentation = () => {
           <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
             {objectives.map((objective, index) => {
               const colorClasses = getColorClasses(objective.color);
-              const IconComponent = objective.icon;
+              const IconComponent = iconMap[objective.icon];
               
               return (
                 <div
@@ -353,7 +203,7 @@ const Presentation = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {careerOpportunities.map((career, index) => {
               const colorClasses = getColorClasses(career.color);
-              const IconComponent = career.icon;
+              const IconComponent = iconMap[career.icon];
               
               return (
                 <div
