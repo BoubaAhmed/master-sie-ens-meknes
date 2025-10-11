@@ -1,44 +1,45 @@
 {
-  "activities": [
+    "activities": [
     {
-      "title": "Atelier IoT et Objets Connectés",
-      "description": "Initiation pratique à la création de systèmes connectés avec Arduino et capteurs intelligents. Une expérience immersive pour maîtriser les fondamentaux de l'Internet des Objets.",
-      "images": [
-        "../assets/streamlit2.jpg",
-        "../assets/chatbots.jpg",
-        "../assets/224A9600.JPG"
-      ],
-      "icon": "Lightbulb",
-      "date": "15 Mars 2024",
-      "time": "14:00 - 17:00",
-      "location": "Lab Innovation",
-      "category": "Workshop"
+        "title": "Atelier IoT et Objets Connectés",
+        "description": "Initiation pratique à la création de systèmes connectés avec Arduino et capteurs intelligents. Une expérience immersive pour maîtriser les fondamentaux de l'Internet des Objets.",
+        "images": [
+            "../assets/ens/Activities/act1.jpg",
+            "../assets/ens/Activities/act2.jpg",
+            "../assets/ens/Activities/act3.jpg"
+        ],
+        "icon": "Lightbulb",
+        "date": "15 Mars 2024",
+        "time": "14:00 - 17:00",
+        "location": "Lab Innovation",
+        "category": "Workshop"
     },
     {
-      "title": "Workshop Intelligence Artificielle",
-      "description": "Exploration des modèles de Deep Learning et des applications en vision et NLP. Session intensive avec des cas pratiques concrets et démonstrations en direct.",
-      "images": [
-        "../assets/chatbots.jpg",
-        "../assets/streamlit2.jpg"
-      ],
-      "icon": "Users",
-      "date": "22 Mars 2024",
-      "time": "09:00 - 13:00",
-      "location": "Amphithéâtre A",
-      "category": "Formation"
+        "title": "Workshop Intelligence Artificielle",
+        "description": "Exploration des modèles de Deep Learning et des applications en vision et NLP. Session intensive avec des cas pratiques concrets et démonstrations en direct.",
+        "images": [
+            "../assets/ens/Activities/act4.jpg",
+            "../assets/ens/Activities/act5.jpg"
+        ],
+        "icon": "Users",
+        "date": "22 Mars 2024",
+        "time": "09:00 - 13:00",
+        "location": "Amphithéâtre A",
+        "category": "Formation"
     },
     {
-      "title": "Journée d'Innovation & Recherche",
-      "description": "Présentations des projets étudiants et échanges avec des experts du domaine numérique. Networking et découvertes des dernières avancées technologiques.",
-      "images": [
-        "../assets/224A9600.JPG",
-        "../assets/streamlit2.jpg"
-      ],
-      "icon": "CalendarDays",
-      "date": "5 Avril 2024",
-      "time": "Toute la journée",
-      "location": "Campus Principal",
-      "category": "Conférence"
+        "title": "Journée d'Innovation & Recherche",
+        "description": "Présentations des projets étudiants et échanges avec des experts du domaine numérique. Networking et découvertes des dernières avancées technologiques.",
+        "images": [
+            "../assets/ens/Activities/act6.jpg",
+            "../assets/ens/Activities/act7.jpg",
+            "../assets/ens/Activities/act8.jpg"
+        ],
+        "icon": "CalendarDays",
+        "date": "5 Avril 2024",
+        "time": "Toute la journée",
+        "location": "Campus Principal",
+        "category": "Conférence"
     }
-  ]
+    ]
 }
