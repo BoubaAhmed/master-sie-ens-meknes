@@ -5,10 +5,9 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Detect scroll position
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50); // 50px scroll threshold
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -45,7 +44,6 @@ const NavBar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo + Title */}
           <div className="flex items-center space-x-2">
             <div
               className={`flex items-center justify-center w-12 h-12  text-[15px] font-bold`}
@@ -64,7 +62,6 @@ const NavBar = () => {
             </div>
           </div>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-1">
             {menuItems.map((item) => {
               const Icon = item.icon;
@@ -143,7 +140,6 @@ const NavBar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-white/95 py-2 shadow-sm border-b border-blue-100">
             <div className="flex flex-col px-2">
