@@ -1,27 +1,6 @@
-import React, { useState } from 'react';
-import { 
-  Mail, 
-  MapPin, 
-  Phone, 
-  Clock, 
-  Send, 
-  User, 
-  MessageSquare,
-  Award,
-  BookOpen,
-  Cpu,
-  ExternalLink,
-  ChevronDown,
-  ChevronUp,
-  School,
-  GraduationCap,
-  Building,
-  Map,
-  Target,
-  Bookmark,
-  Rocket,
-  MessageCircle
-} from 'lucide-react';
+import { useState } from 'react';
+import { Mail, MapPin, Clock, Send, User, Award, ExternalLink, ChevronDown, ChevronUp, Bookmark, MessageCircle } from 'lucide-react';
+import { getColorClasses } from '../utils/colorUtils';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -68,7 +47,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: "Horaires",
-      content: "Lun - Ven: 8h30 - 16h30",
+      content: "Lun - Sam: 8h30 - 18h30",
       color: "orange"
     }
   ];
@@ -102,50 +81,9 @@ const Contact = () => {
       answer: "Nos diplômés deviennent Ingénieurs pédagogiques, Data Scientists éducation, Développeurs d'applications éducatives, Consultants EdTech, Chercheurs en IA éducative, et entrepreneurs dans le domaine des technologies éducatives."
     }
   ];
-
-  const getColorClasses = (color) => {
-    const colors = {
-      blue: {
-        bg: 'bg-blue-50',
-        text: 'text-blue-700',
-        icon: 'text-blue-600',
-        gradient: 'from-blue-500 to-blue-600',
-        border: 'border-blue-200',
-        light: 'bg-blue-25'
-      },
-      emerald: {
-        bg: 'bg-emerald-50',
-        text: 'text-emerald-700',
-        icon: 'text-emerald-600',
-        gradient: 'from-emerald-500 to-emerald-600',
-        border: 'border-emerald-200',
-        light: 'bg-emerald-25'
-      },
-      violet: {
-        bg: 'bg-violet-50',
-        text: 'text-violet-700',
-        icon: 'text-violet-600',
-        gradient: 'from-violet-500 to-violet-600',
-        border: 'border-violet-200',
-        light: 'bg-violet-25'
-      },
-      orange: {
-        bg: 'bg-orange-50',
-        text: 'text-orange-700',
-        icon: 'text-orange-600',
-        gradient: 'from-orange-500 to-orange-600',
-        border: 'border-orange-200',
-        light: 'bg-orange-25'
-      }
-    };
-    return colors[color] || colors.blue;
-  };
-
   return (
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        
-        {/* Hero Header */}
         <div className="text-center mb-16">
           <div className="relative flex flex-col items-center justify-center text-center mb-8 px-4 sm:px-6 md:px-8">
             <div className="absolute w-2 h-2 sm:w-3 sm:h-3 bg-blue-400 rounded-full top-0 left-1/3 opacity-70"></div>
@@ -167,12 +105,8 @@ const Contact = () => {
             </p>
           </div>
         </div>
-
-        {/* Main Contact Grid */}
         <div className="grid lg:grid-cols-3 gap-6 mb-16">
-          {/* Contact Information */}
           <div className="lg:col-span-1 space-y-6">
-            {/* Team Members */}
             <div className="rounded-lg shadow-lg p-6">
               <div className="mb-4">
                 <div className="relative flex flex-col items-center mb-4">
@@ -239,7 +173,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <div className="text-center mb-6">
@@ -347,7 +280,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* FAQ Section */}
         <section className="mb-16">
           <div className="p-6">
             <div className="text-center mb-6">
