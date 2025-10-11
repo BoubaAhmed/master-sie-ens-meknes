@@ -1,211 +1,12 @@
-import React from "react";
-import {
-  GraduationCap,
-  BookOpen,
-  FileText,
-  Upload,
-  Search,
-  Users,
-  Calendar,
-  Clock,
-  Megaphone,
-  Edit3,
-  CheckCircle2,
-  Award,
-  Briefcase,
-  Lightbulb,
-  Download,
-  ArrowRight,
-  Star,
-  FileCheck,
-  UserCheck,
-  Mail,
-  Target,
-  Bookmark,
-  Rocket,
-  Clock4,
-  Phone,
-  Brain,
-  Code2,
-  Cpu,
-  Shield,
-  Bot,
-  CircuitBoard,
-  Cloud,
-  Database,
-  Sparkles,
-} from "lucide-react";
+import { GraduationCap, FileText, Upload, Calendar, Clock, CheckCircle2, Lightbulb, Download, ArrowRight, Star, Mail, Target, Bookmark, Rocket, Clock4, Phone, Brain, Code2, Cpu, Bot, CircuitBoard, Cloud, Database, Sparkles, } from "lucide-react";
+import { getColorClasses } from "../utils/colorUtils";
+import requiredDegrees from '../data/requiredDegrees.json';
+import selectionCriteria from '../data/selectionCriteria.json';
+import importantDates from '../data/importantDates.json';
+import applicationSteps from '../data/applicationSteps.json';
+import { iconMap } from '../utils/iconsMap';
 
 const Admission = () => {
-  const requiredDegrees = [
-    {
-      title: "Licence en éducation",
-      icon: GraduationCap,
-      color: "blue",
-      specialities: [
-        "Spécialité informatique",
-        "Spécialité Mathématiques",
-        "Sciences de l'éducation",
-        "Technologies éducatives",
-      ],
-    },
-    {
-      title: "Licence des études fondamentales",
-      icon: BookOpen,
-      color: "emerald",
-      specialities: [
-        "Spécialité Mathématiques",
-        "Spécialité Informatique",
-        "Mathématiques et Informatique",
-        "Sciences et technologies",
-      ],
-    },
-    {
-      title: "Diplômes équivalents",
-      icon: Award,
-      color: "violet",
-      specialities: [
-        "Licence en ingénierie",
-        "Diplômes étrangers équivalents",
-        "Validation des acquis professionnels",
-      ],
-    },
-  ];
-
-  const applicationSteps = [
-    {
-      step: 1,
-      title: "Préparation du dossier",
-      description:
-        "Rassemblez les documents nécessaires pour constituer un dossier complet et compétitif.",
-      icon: FileText,
-      color: "blue",
-      details: [
-        "Copie certifiée du diplôme de licence",
-        "Relevés de notes de la licence",
-        "CV détaillé et actualisé",
-        "Lettre de motivation personnalisée",
-        "Copie de la carte d'identité nationale",
-      ],
-    },
-    {
-      step: 2,
-      title: "Dépôt en ligne",
-      description:
-        "Complétez votre candidature sur notre plateforme dédiée du 11 août au 7 septembre 2025.",
-      icon: Upload,
-      color: "emerald",
-      details: [
-        "Accédez à la plateforme de candidature",
-        "Créez votre compte personnel sécurisé",
-        "Remplissez le formulaire en ligne",
-        "Téléchargez les documents numérisés",
-        "Validez et soumettez votre candidature",
-      ],
-    },
-    {
-      step: 3,
-      title: "Examen du dossier",
-      description:
-        "Notre commission pédagogique examine chaque dossier avec attention et expertise.",
-      icon: Search,
-      color: "violet",
-      details: [
-        "Évaluation approfondie des notes académiques",
-        "Analyse détaillée de la lettre de motivation",
-        "Examen du parcours et expériences professionnelles",
-        "Appréciation des lettres de recommandation",
-        "Présélection des candidats les plus prometteurs",
-      ],
-    },
-    {
-      step: 4,
-      title: "Entretien de sélection",
-      description:
-        "Rencontre avec notre jury pour évaluer votre motivation et votre potentiel.",
-      icon: Users,
-      color: "orange",
-      details: [
-        "Test de motivation et d'engagement",
-        "Évaluation des compétences techniques",
-        "Discussion sur votre projet professionnel",
-        "Présentation de vos attentes et ambitions",
-        "Échange avec les membres du jury",
-      ],
-    },
-  ];
-
-  const importantDates = [
-    {
-      title: "Ouverture des candidatures",
-      date: "11 août 2025",
-      icon: Calendar,
-      status: "upcoming",
-      description: "Début de la période de dépôt des dossiers",
-    },
-    {
-      title: "Clôture des candidatures",
-      date: "7 septembre 2025",
-      icon: Clock,
-      status: "upcoming",
-      description: "Date limite impérative pour le dépôt",
-    },
-    {
-      title: "Entretiens de sélection",
-      date: "15-20 septembre 2025",
-      icon: UserCheck,
-      status: "upcoming",
-      description: "Convocation des candidats présélectionnés",
-    },
-    {
-      title: "Publication des résultats",
-      date: "25 septembre 2025",
-      icon: Megaphone,
-      status: "upcoming",
-      description: "Annonce des candidats retenus",
-    },
-    {
-      title: "Inscription administrative",
-      date: "1-10 octobre 2025",
-      icon: Edit3,
-      status: "upcoming",
-      description: "Finalisation de l'inscription",
-    },
-    {
-      title: "Rentrée universitaire",
-      date: "15 octobre 2025",
-      icon: GraduationCap,
-      status: "upcoming",
-      description: "Début des cours et intégration",
-    },
-  ];
-
-  const selectionCriteria = [
-    {
-      percentage: 50,
-      label: "Dossier académique",
-      icon: FileCheck,
-      color: "blue",
-    },
-    {
-      percentage: 30,
-      label: "Entretien de motivation",
-      icon: Users,
-      color: "emerald",
-    },
-    {
-      percentage: 15,
-      label: "Expérience professionnelle",
-      icon: Briefcase,
-      color: "violet",
-    },
-    {
-      percentage: 5,
-      label: "Projets personnels",
-      icon: Lightbulb,
-      color: "orange",
-    },
-  ];
 
   const floatingIcons = [
     { icon: Brain, top: "10%", left: "5%", delay: "0s" },
@@ -219,48 +20,9 @@ const Admission = () => {
     { icon: GraduationCap, top: "65%", left: "28%", delay: "3.5s" },
   ];
 
-  const getColorClasses = (color) => {
-    const colors = {
-      blue: {
-        bg: "bg-blue-50",
-        text: "text-blue-700",
-        icon: "text-blue-600",
-        gradient: "from-blue-500 to-blue-600",
-        border: "border-blue-200",
-        light: "bg-blue-25",
-      },
-      emerald: {
-        bg: "bg-emerald-50",
-        text: "text-emerald-700",
-        icon: "text-emerald-600",
-        gradient: "from-emerald-500 to-emerald-600",
-        border: "border-emerald-200",
-        light: "bg-emerald-25",
-      },
-      violet: {
-        bg: "bg-violet-50",
-        text: "text-violet-700",
-        icon: "text-violet-600",
-        gradient: "from-violet-500 to-violet-600",
-        border: "border-violet-200",
-        light: "bg-violet-25",
-      },
-      orange: {
-        bg: "bg-orange-50",
-        text: "text-orange-700",
-        icon: "text-orange-600",
-        gradient: "from-orange-500 to-orange-600",
-        border: "border-orange-200",
-        light: "bg-orange-25",
-      },
-    };
-    return colors[color] || colors.blue;
-  };
-
   return (
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        {/* Hero Header */}
         <div className="text-center mb-16">
           <div className="relative flex flex-col items-center justify-center text-center mb-8 px-4 sm:px-6 md:px-8">
             <div className="absolute w-2 h-2 sm:w-3 sm:h-3 bg-blue-400 rounded-full top-0 left-1/3 opacity-70"></div>
@@ -287,12 +49,11 @@ const Admission = () => {
           </div>
         </div>
 
-        {/* Required Degrees Section */}
         <section className="mb-16">
           <div className="grid md:grid-cols-3 gap-6">
             {requiredDegrees.map((degree, index) => {
               const colorClasses = getColorClasses(degree.color);
-              const IconComponent = degree.icon;
+              const IconComponent = iconMap[degree.icon] || Star;
 
               return (
                 <div
@@ -323,8 +84,6 @@ const Admission = () => {
             })}
           </div>
         </section>
-
-        {/* Selection Criteria */}
         <section className="mb-16">
           <div className="p-6">
             <div className="text-center mb-6">
@@ -346,7 +105,7 @@ const Admission = () => {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
               {selectionCriteria.map((criterion, index) => {
                 const colorClasses = getColorClasses(criterion.color);
-                const IconComponent = criterion.icon;
+                const IconComponent = iconMap[criterion.icon] || Star;
 
                 return (
                   <div
@@ -375,7 +134,6 @@ const Admission = () => {
               })}
             </div>
 
-            {/* Additional Info */}
             <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
               <div className="flex items-start space-x-3">
                 <Lightbulb className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
@@ -403,7 +161,6 @@ const Admission = () => {
           </div>
         </section>
 
-        {/* Application Process */}
         <section className="mb-16">
           <div className="text-center mb-8">
             <div className="relative flex flex-col items-center justify-center text-center mb-6 px-4 sm:px-6 md:px-8">
@@ -427,7 +184,7 @@ const Admission = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {applicationSteps.map((step) => {
               const colorClasses = getColorClasses(step.color);
-              const IconComponent = step.icon;
+              const IconComponent = iconMap[step.icon] || Star;
 
               return (
                 <div
@@ -448,7 +205,6 @@ const Admission = () => {
                       >
                         {step.title}
                       </div>
-                      {/* <h3 className="font-bold text-gray-900 text-lg">{step.title}</h3> */}
                     </div>
                   </div>
 
@@ -479,7 +235,6 @@ const Admission = () => {
           </div>
         </section>
 
-        {/* Timeline Section */}
         <section className="mb-16">
           <div className="p-6">
             <div className="text-center mb-6">
@@ -500,7 +255,7 @@ const Admission = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {importantDates.map((date, index) => {
-                const IconComponent = date.icon;
+                const IconComponent = iconMap[date.icon] || Star;
 
                 return (
                   <div
@@ -530,7 +285,6 @@ const Admission = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="relative mb-16 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl shadow-xl overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
             {floatingIcons.map((item, index) => {
@@ -600,7 +354,6 @@ const Admission = () => {
           </div>
         </section>
 
-        {/* Contact Info */}
         <div className="text-center">
           <div className="bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
             <h4 className="font-bold text-gray-900 text-lg mb-4 flex items-center justify-center">
