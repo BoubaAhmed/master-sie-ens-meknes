@@ -3,7 +3,6 @@ import Hero from './components/Hero';
 import Presentation from './components/Presentation';
 import Program from './components/Program';
 import Admission from './components/Admission';
-import News from './components/News';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import image from './assets/bb.jpg'
@@ -71,9 +70,6 @@ const App = () => {
         <section id="activites" className="scroll-mt-12">
           <Activities />
         </section>
-        {/* <section id="actualites" className="scroll-mt-12">
-          <News />
-        </section> */}
         <section id="contact" className="scroll-mt-12">
           <Contact />
         </section>
