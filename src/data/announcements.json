@@ -1,14 +1,15 @@
 [
     {
         "id": 1,
-        "title": "Inscriptions Rentrée 2024",
-        "description": "Les inscriptions pour la rentrée académique 2024-2025 sont ouvertes. Dépêchez-vous de postuler !",
-        "date": "15 Septembre 2024",
+        "title": "Inscriptions Rentrée 2025",
+        "description": "Les inscriptions pour la rentrée académique 2025-2026 sont ouvertes. Dépêchez-vous de postuler !",
+        "date": "15 Octobre 2025",
         "time": "08:00 - 17:00",
         "location": "Secrétariat du Master",
         "category": "Administratif",
         "urgency": "high",
-        "link": "https://google.com"
+        "link": "https://google.com",
+        "pinned": true
     },
     {
         "id": 2,

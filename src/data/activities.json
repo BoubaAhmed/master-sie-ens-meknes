@@ -1,45 +1,57 @@
 {
     "activities": [
-    {
-        "title": "Atelier IoT et Objets Connectés",
-        "description": "Initiation pratique à la création de systèmes connectés avec Arduino et capteurs intelligents. Une expérience immersive pour maîtriser les fondamentaux de l'Internet des Objets.",
-        "images": [
-            "../assets/ens/Activities/act1.jpg",
-            "../assets/ens/Activities/act2.jpg",
-            "../assets/ens/Activities/act3.jpg"
-        ],
-        "icon": "Lightbulb",
-        "date": "15 Mars 2024",
-        "time": "14:00 - 17:00",
-        "location": "Lab Innovation",
-        "category": "Workshop"
-    },
-    {
-        "title": "Workshop Intelligence Artificielle",
-        "description": "Exploration des modèles de Deep Learning et des applications en vision et NLP. Session intensive avec des cas pratiques concrets et démonstrations en direct.",
-        "images": [
-            "../assets/ens/Activities/act4.jpg",
-            "../assets/ens/Activities/act5.jpg"
-        ],
-        "icon": "Users",
-        "date": "22 Mars 2024",
-        "time": "09:00 - 13:00",
-        "location": "Amphithéâtre A",
-        "category": "Formation"
-    },
-    {
-        "title": "Journée d'Innovation & Recherche",
-        "description": "Présentations des projets étudiants et échanges avec des experts du domaine numérique. Networking et découvertes des dernières avancées technologiques.",
-        "images": [
-            "../assets/ens/Activities/act6.jpg",
-            "../assets/ens/Activities/act7.jpg",
-            "../assets/ens/Activities/act8.jpg"
-        ],
-        "icon": "CalendarDays",
-        "date": "5 Avril 2024",
-        "time": "Toute la journée",
-        "location": "Campus Principal",
-        "category": "Conférence"
-    }
+        {
+            "id": 1,
+            "title": "Formation LaTeX pour la Rédaction Scientifique",
+            "description": "Apprentissage des bases de LaTeX pour la rédaction de rapports, articles et mémoires professionnels. Les participants ont appris à structurer un document, insérer des formules et gérer les références bibliographiques.",
+            "icon": "FileCode",
+            "date": "10 Mai 2024",
+            "time": "09:00 - 12:00",
+            "location": "Salle Informatique 2",
+            "category": "Formation"
+        },
+        {
+            "id": 2,
+            "title": "Workshop Chatbots & IA Conversationnelle",
+            "description": "Découverte des techniques de création de chatbots intelligents à l’aide de modèles NLP et d’outils modernes. Les étudiants ont conçu des prototypes fonctionnels en équipe.",
+            "images": "../assets/ens/Activities/chatbot.jpg",
+            "icon": "MessageSquare",
+            "date": "18 Mai 2024",
+            "time": "14:00 - 17:00",
+            "location": "Lab IA & Data Science",
+            "category": "Workshop"
+        },
+        {
+            "id": 3,
+            "title": "Formation Streamlit pour les Applications IA",
+            "description": "Initiation au framework Streamlit pour transformer facilement des modèles IA en applications web interactives. Une formation orientée pratique avec déploiement final des projets.",
+            "images": "../assets/ens/Activities/streamlit.jpg",
+            "icon": "Rocket",
+            "date": "25 Mai 2024",
+            "time": "09:00 - 13:00",
+            "location": "Salle Développement",
+            "category": "Formation"
+        },
+        {
+            "id": 4,
+            "title": "Formation Prompt Engineering",
+            "description": "Session dédiée à la maîtrise du prompt engineering pour optimiser les résultats des modèles de langage. Les participants ont appris à concevoir des prompts efficaces et à automatiser certaines tâches.",
+            "images": "../assets/ens/Activities/promtEngineering.jpeg",
+            "icon": "Brain",
+            "date": "1 Juin 2024",
+            "time": "10:00 - 13:00",
+            "location": "Lab Innovation",
+            "category": "Formation"
+        },
+        {
+            "id": 5,
+            "title": "Introduction au Traitement Automatique du Langage (NLP)",
+            "description": "Formation d’introduction au NLP : concepts de base, prétraitement du texte, embeddings, et applications dans l’éducation. Atelier pratique avec démonstrations en Python.",
+            "icon": "BookOpen",
+            "date": "8 Juin 2024",
+            "time": "09:30 - 12:30",
+            "location": "Salle Data Science",
+            "category": "Formation"
+        }
     ]
 }
