@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Application de Quiz Intelligent",
+    "module": "Intelligence Artificielle Éducative",
+    "professor": "Dr. El Arbi ABDELLAOUI ALAOUI",
+    "type": "Binôme",
+    "description": "Développer une application web de quiz qui s'adapte au niveau de l'étudiant",
+    "technologies": ["React", "Python", "FastAPI"],
+    "skills": ["Développement web", "Algorithmes d'adaptation", "UI/UX"]
+  },
+  {
+    "id": 2,
+    "title": "Analyse de Données Éducatives",
+    "module": "Data Science Appliquée",
+    "professor": "Dr. Ahmed BENNANI",
+    "type": "Monôme",
+    "description": "Analyser un dataset d'apprentissage pour identifier les patterns de réussite",
+    "technologies": ["Python", "Pandas", "Scikit-learn", "Matplotlib"],
+    "skills": ["Analyse de données", "Visualisation", "Machine Learning"]
+  },
+  {
+    "id": 3,
+    "title": "Système de Gestion de Cours",
+    "module": "Développement Web Avancé",
+    "professor": "Dr. Sophia MARTIN",
+    "type": "Groupe (3-4)",
+    "description": "Plateforme de gestion de contenu pédagogique avec espace étudiant et professeur",
+    "technologies": ["Vue.js", "Node.js", "MongoDB"],
+    "skills": ["Full-stack", "Base de données", "Gestion de projet"]
+  },
+  {
+    "id": 4,
+    "title": "Outil de Visualisation de Données",
+    "module": "Visualisation de l'Information",
+    "professor": "Dr. Jean DUPONT",
+    "type": "Binôme",
+    "description": "Créer des dashboards interactifs pour l'analyse des performances étudiantes",
+    "technologies": ["D3.js", "JavaScript", "CSS"],
+    "skills": ["DataViz", "JavaScript avancé", "Design d'interface"]
+  },
+  {
+    "id": 5,
+    "title": "Chatbot d'Assistance",
+    "module": "Traitement du Langage Naturel",
+    "professor": "Dr. Karim ALAMI",
+    "type": "Monôme",
+    "description": "Assistant virtuel pour répondre aux questions fréquentes des étudiants",
+    "technologies": ["Python", "NLTK", "Flask"],
+    "skills": ["NLP", "Développement API", "IA conversationnelle"]
+  },
+  {
+    "id": 6,
+    "title": "Application Mobile Éducative",
+    "module": "Développement Mobile",
+    "professor": "Dr. Leila CHERKAOUI",
+    "type": "Binôme",
+    "description": "Application mobile pour l'apprentissage des concepts fondamentaux",
+    "technologies": ["React Native", "Firebase", "Redux"],
+    "skills": ["Mobile development", "Cloud services", "State management"]
+  },
+  {
+    "id": 7,
+    "title": "Système de Recommandation",
+    "module": "Algorithmes Avancés",
+    "professor": "Dr. Marc LEROY",
+    "type": "Groupe (3-4)",
+    "description": "Algorithme de recommandation de ressources pédagogiques",
+    "technologies": ["Python", "TensorFlow", "Pandas"],
+    "skills": ["Algorithmes", "Machine Learning", "Traitement de données"]
+  },
+  {
+    "id": 8,
+    "title": "Jeux Sérieux Éducatifs",
+    "module": "Ludification et Gamification",
+    "professor": "Dr. Fatima ZAHRA",
+    "type": "Binôme",
+    "description": "Développer un jeu éducatif pour l'apprentissage des mathématiques",
+    "technologies": ["Unity", "C#", "Blender"],
+    "skills": ["Game development", "Design de jeu", "Modélisation 3D"]
+  }
+]
