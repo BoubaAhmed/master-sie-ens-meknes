@@ -1,46 +1,42 @@
 import { useState, useEffect, useRef } from 'react';
-import { CalendarDays, Users, Lightbulb, Clock, MapPin, ArrowRight, ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { CalendarDays, Lightbulb, Clock, MapPin, ArrowRight, ArrowLeft, X, BookOpen, Brain, Rocket, MessageSquare, FileCode } from "lucide-react";
 import activitiesData from '../data/activities.json';
 
-import act1 from "../assets/ens/Activities/act1.jpg";
-import act2 from "../assets/ens/Activities/act2.jpg";
-import act3 from "../assets/ens/Activities/act3.jpg";
-import act4 from "../assets/ens/Activities/act4.jpg";
-import act5 from "../assets/ens/Activities/act5.jpg";
-import act6 from "../assets/ens/Activities/act6.jpg";
-import act7 from "../assets/ens/Activities/act7.jpg";
-import act8 from "../assets/ens/Activities/act8.jpg";
+import promtEngineering from "../assets/ens/Activities/promtEngineering.jpeg";
+import chatbot from "../assets/ens/Activities/chatbot.jpg";
+import streamlit from "../assets/ens/Activities/streamlit.jpg";
+import defaultImg from "../assets/ens/Activities/default.jpg";
 
 const imageMap = {
-  "../assets/ens/Activities/act1.jpg": act1,
-  "../assets/ens/Activities/act2.jpg": act2,
-  "../assets/ens/Activities/act3.jpg": act3,
-  "../assets/ens/Activities/act4.jpg": act4,
-  "../assets/ens/Activities/act5.jpg": act5,
-  "../assets/ens/Activities/act6.jpg": act6,
-  "../assets/ens/Activities/act7.jpg": act7,
-  "../assets/ens/Activities/act8.jpg": act8
+  "../assets/ens/Activities/promtEngineering.jpeg": promtEngineering,
+  "../assets/ens/Activities/chatbot.jpg": chatbot,
+  "../assets/ens/Activities/streamlit.jpg": streamlit
 };
 
 const iconMap = {
-  Lightbulb: <Lightbulb className="h-4 w-4 sm:h-5 sm:w-5" />,
-  Users: <Users className="h-4 w-4 sm:h-5 sm:w-5" />,
-  CalendarDays: <CalendarDays className="h-4 w-4 sm:h-5 sm:w-5" />
+  Brain: <Brain className="h-4 w-4 sm:h-5 sm:w-5" />,
+  Rocket: <Rocket className="h-4 w-4 sm:h-5 sm:w-5" />,
+  MessageSquare: <MessageSquare className="h-4 w-4 sm:h-5 sm:w-5" />,
+  FileCode: <FileCode className="h-4 w-4 sm:h-5 sm:w-5" />,
+  BookOpen: <BookOpen className="h-4 w-4 sm:h-5 sm:w-5" />
 };
 
 export default function Activities() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [showImageModal, setShowImageModal] = useState(false);
   const carouselRef = useRef(null);
 
+
   const activities = activitiesData.activities.map(activity => ({
     ...activity,
-    images: activity.images.map(img => imageMap[img]),
+    images: activity.images
+      ? imageMap[activity.images] || defaultImg
+      : [defaultImg], //si aucune image, on met celle par défaut
     icon: iconMap[activity.icon]
   }));
+
 
   const currentActivity = activities[currentIndex];
 
@@ -54,9 +50,6 @@ export default function Activities() {
     return () => clearInterval(interval);
   }, [currentIndex, isAutoPlaying, isTransitioning]);
 
-  useEffect(() => {
-    setCurrentImageIndex(0);
-  }, [currentIndex]);
 
   const smoothTransition = (callback) => {
     setIsTransitioning(true);
@@ -84,27 +77,11 @@ export default function Activities() {
     });
   };
 
-  const nextImage = () => {
-    setCurrentImageIndex(prev => 
-      prev === currentActivity.images.length - 1 ? 0 : prev + 1
-    );
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex(prev => 
-      prev === 0 ? currentActivity.images.length - 1 : prev - 1
-    );
-  };
-
   const goToSlide = (index) => {
     if (isTransitioning || index === currentIndex) return;
     smoothTransition(() => {
       setCurrentIndex(index);
     });
-  };
-
-  const goToImage = (index) => {
-    setCurrentImageIndex(index);
   };
 
   return (
@@ -117,7 +94,7 @@ export default function Activities() {
             <div className="animate-bounce absolute w-5 h-5 bg-pink-400 top-1/2 left-1/3 rotate-12 skew-y-6 opacity-50"></div>
             <div className="animate-bounce absolute w-3 h-3 bg-indigo-500 bottom-2 right-1/3 opacity-70 rounded-md"></div>
 
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold flex flex-wrap items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
+            <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold flex flex-wrap items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
               <Lightbulb className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-blue-500 flex-shrink-0" />
               Activités & Ateliers du Master
             </h2>
@@ -141,48 +118,15 @@ export default function Activities() {
             <div className="order-2 lg:order-1 lg:flex-1 overflow-hidden">
               <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-xl ">
                 <img
-                  src={currentActivity.images[currentImageIndex]} 
+                  src={currentActivity.images}
                   alt={currentActivity.title}
-                  className="w-full h-full object-cover cursor-pointer"
+                  className="w-full h-80 object-cover cursor-pointer"
                   onClick={() => setShowImageModal(true)}
+                  onError={(e) => {
+                    e.target.onerror = null; // évite une boucle infinie si l’image par défaut n’existe pas
+                    e.target.src = defaultImg; // chemin de l’image par défaut
+                  }}
                 />
-                
-                {currentActivity.images.length > 1 && (
-                  <>
-                    <button
-                      onClick={(e) => { e.stopPropagation(); prevImage(); }}
-                      className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-300"
-                    >
-                      <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
-                    </button>
-                    <button
-                      onClick={(e) => { e.stopPropagation(); nextImage(); }}
-                      className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-300"
-                    >
-                      <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
-                    </button>
-                  </>
-                )}
-
-                {currentActivity.images.length > 1 && (
-                  <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-2">
-                    {currentActivity.images.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={(e) => { e.stopPropagation(); goToImage(index); }}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                          index === currentImageIndex ? 'bg-white' : 'bg-white/50'
-                        }`}
-                      />
-                    ))}
-                  </div>
-                )}
-
-                {currentActivity.images.length > 1 && (
-                  <div className="absolute top-3 right-3 bg-black/50 text-white px-2 py-1 rounded-full text-xs">
-                    {currentImageIndex + 1}/{currentActivity.images.length}
-                  </div>
-                )}
               </div>
             </div>
 
@@ -297,26 +241,10 @@ export default function Activities() {
         >
           <div className="relative max-h-[90vh] max-w-[90vw]">
             <img
-              src={currentActivity.images[currentImageIndex]}
+              src={currentActivity.images}
               alt="Vue agrandie"
               className="max-h-[70vh] max-w-[80vw] object-contain rounded-lg"
             />
-            {currentActivity.images.length > 1 && (
-              <>
-                <button
-                  onClick={(e) => { e.stopPropagation(); prevImage(); }}
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-3 transition-all duration-300"
-                >
-                  <ChevronLeft className="h-6 w-6" />
-                </button>
-                <button
-                  onClick={(e) => { e.stopPropagation(); nextImage(); }}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-3 transition-all duration-300"
-                >
-                  <ChevronRight className="h-6 w-6" />
-                </button>
-              </>
-            )}
             <button
               onClick={() => setShowImageModal(false)}
               className="absolute top-4 right-4 text-white bg-black/70 hover:bg-black/90 rounded-full p-2"
