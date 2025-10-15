@@ -1,21 +1,11 @@
-import NavBar from './components/NavBar';
-import Hero from './components/Hero';
-import Presentation from './components/Presentation';
-import Program from './components/Program';
-import Admission from './components/Admission';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import image from './assets/bb.jpg'
-import Activities from './components/Activities';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
 import { useEffect, useState } from 'react';
 import { ChevronUp } from 'lucide-react';
-import Gallery from './components/Gallery';
-import Announcements from './components/Announcements';
-// const bgImage = "https://images.pexels.com/photos/7972326/pexels-photo-7972326.jpeg";
 
-const App = () => {
+function App() {
   const [showTopBtn, setShowTopBtn] = useState(false);
-
+  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 200) {
@@ -27,7 +17,7 @@ const App = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -35,46 +25,10 @@ const App = () => {
     });
   };
   return (
-    <div className="relative min-h-screen">
-      <div className="fixed top-0 left-0 w-full z-50">
-        <NavBar />
-      </div>
-      <div
-        className="relative md:min-h-screen bg-cover bg-center bg-no-repeat pt-16"
-        style={{ backgroundImage: `url('${image}')` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/60 to-gray-900/80 z-0 pointer-events-none" />
-        <div className="relative z-10 flex flex-col">
-          <section id="accueil">
-            <Hero />
-          </section>
-        </div>
-      </div>
-      
-      <main className="bg-white">
-        <section id="presentation" className="scroll-mt-12">
-          <Presentation />
-        </section>
-        <section id="announcements" className="scroll-mt-12">
-          <Announcements />
-        </section>
-        <section id="gallery" className=" scroll-mt-12">
-          <Gallery />
-        </section>
-        <section id="programme" className="scroll-mt-12">
-          <Program />
-        </section>
-        <section id="admission" className="scroll-mt-12">
-          <Admission />
-        </section>
-        <section id="activites" className="scroll-mt-12">
-          <Activities />
-        </section>
-        <section id="contact" className="scroll-mt-12">
-          <Contact />
-        </section>
-      </main>
-      <Footer />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
 
       {showTopBtn && (
         <button
@@ -94,8 +48,7 @@ const App = () => {
           </div>
         </button>
       )}
-    </div>
+    </Router>
   );
-};
-
+}
 export default App;
