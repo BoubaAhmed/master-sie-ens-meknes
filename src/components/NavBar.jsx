@@ -15,11 +15,11 @@ const NavBar = () => {
 
   const menuItems = [
     { id: "accueil", label: "Accueil", icon: Home },
-    { id: "presentation", label: "Présentation", icon: Info },
     { id: "announcements", label: "Annonces", icon: Bell },
     { id: "programme", label: "Programme", icon: BookOpen },
+    { id: "activites", label: "Activités & Conférences", icon: Newspaper },
     { id: "admission", label: "Admission", icon: FileText },
-    { id: "activites", label: "Activités", icon: Newspaper },
+    { id: "projetcs", label: "Projets", icon: Info },
     { id: "contact", label: "Contact", icon: Mail },
   ];
 
@@ -66,18 +66,20 @@ const NavBar = () => {
             {menuItems.map((item) => {
               const Icon = item.icon;
               return (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`flex items-center hover:cursor-pointer cursor-pointer gap-1 px-2 py-1 text-sm transition-colors ${
-                    scrolled
-                      ? "text-gray-800 hover:text-blue-600"
-                      : "text-white hover:text-blue-400"
-                  }`}
-                >
-                  <Icon size={18} className="inline" />
-                  <span>{item.label}</span>
-                </button>
+                <>
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`flex items-center hover:cursor-pointer cursor-pointer gap-1 px-2 py-1 text-sm transition-colors ${
+                      scrolled
+                        ? "text-gray-800 hover:text-blue-600"
+                        : "text-white hover:text-blue-400"
+                    }`}
+                  >
+                    <Icon size={18} className="inline" />
+                    <span>{item.label}</span>
+                  </button>
+                </>
               );
             })}
             <div
