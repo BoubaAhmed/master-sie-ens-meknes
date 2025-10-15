@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import { X, Users2, Building, GraduationCap, Microscope, ArrowRight, ArrowLeft, MapPin, Home, Cpu, Wifi } from "lucide-react";
 
-import gallery1 from "../assets/ens/3L1A8538.jpg";
-import gallery2 from "../assets/ens/3L1A8412.jpg";
-import gallery3 from "../assets/ens/ens.jpg";
-import gallery4 from "../assets/ens/salle-bloc.jpg";
-import gallery5 from "../assets/ens/grand-salle-bloc-d.jpg";
+import gallery1 from "../assets/ens/Salles/3L1A8538.jpg";
+import gallery2 from "../assets/ens/Salles/3L1A8412.jpg";
+import gallery3 from "../assets/ens/Salles/ens.jpg";
+import gallery4 from "../assets/ens/Salles/salle-bloc.jpg";
+import gallery5 from "../assets/ens/Salles/grand-salle-bloc-d.jpg";
 import { iconMap } from '../utils/iconsMap';
 import galleryData from '../data/galleryData.json';
 
@@ -99,7 +99,7 @@ export default function Gallery() {
                     <div className="hidden md:block animate-pulse absolute w-5 h-5 bg-indigo-400 top-1/2 left-1/3 rotate-12 skew-y-6 opacity-50"></div>
                     <div className="hidden sm:block animate-pulse absolute w-3 h-3 bg-blue-500 bottom-2 right-1/3 opacity-70 rounded-md"></div>
 
-                    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold flex flex-wrap items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
+                    <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold flex flex-wrap items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
                     <Building className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-blue-500 flex-shrink-0" />
                     Infrastructures & Salles
                     </h2>
