@@ -1,82 +1,62 @@
 [
   {
     "id": 1,
-    "title": "Application de Quiz Intelligent",
-    "module": "Intelligence Artificielle Éducative",
-    "professor": "Dr. El Arbi ABDELLAOUI ALAOUI",
+    "title": "Système de présence automatique",
+    "module": "IoT - Classe Intelligente",
+    "professor": "Pr. Soulimae Omari",
     "type": "Binôme",
-    "description": "Développer une application web de quiz qui s'adapte au niveau de l'étudiant",
-    "technologies": ["React", "Python", "FastAPI"],
-    "skills": ["Développement web", "Algorithmes d'adaptation", "UI/UX"]
+    "description": "Développer un système utilisant la RFID ou la reconnaissance faciale pour enregistrer automatiquement la présence des étudiants",
+    "technologies": ["Arduino", "RFID", "Python", "Base de données"],
+    "skills": ["Électronique embarquée", "Traitement de données", "Systèmes automatisés"]
   },
   {
     "id": 2,
-    "title": "Analyse de Données Éducatives",
-    "module": "Data Science Appliquée",
-    "professor": "Dr. Ahmed BENNANI",
-    "type": "Monôme",
-    "description": "Analyser un dataset d'apprentissage pour identifier les patterns de réussite",
-    "technologies": ["Python", "Pandas", "Scikit-learn", "Matplotlib"],
-    "skills": ["Analyse de données", "Visualisation", "Machine Learning"]
+    "title": "Surveillance de la qualité de l'air et ventilation intelligente",
+    "module": "IoT - Classe Intelligente",
+    "professor": "Pr. Soulimae Omari",
+    "type": "Binôme",
+    "description": "Créer un réseau de capteurs pour monitorer le CO2 et l'humidité avec activation automatique de la ventilation",
+    "technologies": ["Capteurs IoT", "ESP32", "MQTT", "Node-RED"],
+    "skills": ["Réseaux de capteurs", "Automatisme", "Télémétrie"]
   },
   {
     "id": 3,
-    "title": "Système de Gestion de Cours",
-    "module": "Développement Web Avancé",
-    "professor": "Dr. Sophia MARTIN",
-    "type": "Groupe (3-4)",
-    "description": "Plateforme de gestion de contenu pédagogique avec espace étudiant et professeur",
-    "technologies": ["Vue.js", "Node.js", "MongoDB"],
-    "skills": ["Full-stack", "Base de données", "Gestion de projet"]
+    "title": "Station météo éducative connectée",
+    "module": "IoT - Classe Intelligente",
+    "professor": "Pr. Soulimae Omari",
+    "type": "Binôme",
+    "description": "Concevoir une station météo avec affichage en temps réel des données environnementales de la classe",
+    "technologies": ["Capteurs météo", "LCD", "API REST", "Cloud"],
+    "skills": ["Instrumentation", "Visualisation données", "Connectivité cloud"]
   },
   {
     "id": 4,
-    "title": "Outil de Visualisation de Données",
-    "module": "Visualisation de l'Information",
-    "professor": "Dr. Jean DUPONT",
-    "type": "Binôme",
-    "description": "Créer des dashboards interactifs pour l'analyse des performances étudiantes",
-    "technologies": ["D3.js", "JavaScript", "CSS"],
-    "skills": ["DataViz", "JavaScript avancé", "Design d'interface"]
+    "title": "Éclairage intelligent de la classe",
+    "module": "IoT - Classe Intelligente",
+    "professor": "Pr. Soulimae Omari",
+    "type": "Groupe 3",
+    "description": "Système d'éclairage automatique s'adaptant à la luminosité naturelle et à l'occupation de la salle",
+    "technologies": ["Capteurs LDR", "Relais", "Microcontrôleur", "Algorithmes PWM"],
+    "skills": ["Gestion d'énergie", "Automatisme", "Programmation embarquée"]
   },
   {
     "id": 5,
-    "title": "Chatbot d'Assistance",
-    "module": "Traitement du Langage Naturel",
-    "professor": "Dr. Karim ALAMI",
-    "type": "Monôme",
-    "description": "Assistant virtuel pour répondre aux questions fréquentes des étudiants",
-    "technologies": ["Python", "NLTK", "Flask"],
-    "skills": ["NLP", "Développement API", "IA conversationnelle"]
+    "title": "Indicateur sonore pour la discipline",
+    "module": "IoT - Classe Intelligente",
+    "professor": "Pr. Soulimae Omari",
+    "type": "Binôme",
+    "description": "Développer un système monitorant le bruit en temps réel avec feedback visuel pour réguler le niveau sonore",
+    "technologies": ["Capteur sonore", "LED RGB", "Traitement signal", "Affichage"],
+    "skills": ["Traitement du signal", "Design d'interface", "Systèmes temps réel"]
   },
   {
     "id": 6,
-    "title": "Application Mobile Éducative",
-    "module": "Développement Mobile",
-    "professor": "Dr. Leila CHERKAOUI",
+    "title": "Jardin pédagogique connecté",
+    "module": "IoT - Classe Intelligente",
+    "professor": "Pr. Soulimae Omari",
     "type": "Binôme",
-    "description": "Application mobile pour l'apprentissage des concepts fondamentaux",
-    "technologies": ["React Native", "Firebase", "Redux"],
-    "skills": ["Mobile development", "Cloud services", "State management"]
-  },
-  {
-    "id": 7,
-    "title": "Système de Recommandation",
-    "module": "Algorithmes Avancés",
-    "professor": "Dr. Marc LEROY",
-    "type": "Groupe (3-4)",
-    "description": "Algorithme de recommandation de ressources pédagogiques",
-    "technologies": ["Python", "TensorFlow", "Pandas"],
-    "skills": ["Algorithmes", "Machine Learning", "Traitement de données"]
-  },
-  {
-    "id": 8,
-    "title": "Jeux Sérieux Éducatifs",
-    "module": "Ludification et Gamification",
-    "professor": "Dr. Fatima ZAHRA",
-    "type": "Binôme",
-    "description": "Développer un jeu éducatif pour l'apprentissage des mathématiques",
-    "technologies": ["Unity", "C#", "Blender"],
-    "skills": ["Game development", "Design de jeu", "Modélisation 3D"]
+    "description": "Monitoring automatisé des paramètres d'un jardin éducatif (humidité, température, luminosité)",
+    "technologies": ["Capteurs horticoles", "Systèmes d'arrosage", "IoT", "Dashboard"],
+    "skills": ["Agrotech", "Gestion données", "Contrôleurs automatisés"]
   }
 ]
