@@ -5,7 +5,7 @@ import Program from './Program';
 import Admission from './Admission';
 import Contact from './Contact';
 import Footer from './Footer';
-import image from '../assets/bb.jpg'
+import image from '../assets/background.jpg'
 import Activities from './Activities';
 import Gallery from './Gallery';
 import Announcements from './Announcements';
