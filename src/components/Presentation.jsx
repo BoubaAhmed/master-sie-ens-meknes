@@ -28,7 +28,7 @@ const Presentation = () => {
             <div className="absolute w-2 h-2 sm:w-3 sm:h-3 bg-pink-400 rounded-full top-1/2 right-1/3 opacity-70"></div>
             <div className="absolute w-3 h-3 sm:w-4 sm:h-4 bg-indigo-400 rounded-full bottom-2 right-1/4 opacity-60"></div>
 
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold flex flex-wrap items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-snug">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold flex flex-wrap items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-snug">
               <Bot className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-blue-500 flex-shrink-0" />
               Systèmes Intelligents pour l'Éducation
             </h2>
@@ -84,7 +84,7 @@ const Presentation = () => {
               <div className="absolute w-2 h-2 sm:w-3 sm:h-3 bg-pink-400 rounded-full top-1/2 right-1/3 opacity-70"></div>
               <div className="absolute w-3 h-3 sm:w-4 sm:h-4 bg-indigo-400 rounded-full bottom-2 right-1/4 opacity-60"></div>
 
-              <h2 className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-bold flex flex-wrap items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-snug">
+              <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold flex flex-wrap items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-snug">
                 <Target className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-blue-500 flex-shrink-0" />
                 Objectifs <span className="text-gray-800">de la Formation</span>
               </h2>
@@ -182,7 +182,7 @@ const Presentation = () => {
               <div className="absolute w-3 h-3 sm:w-4 sm:h-4 bg-purple-500 rounded-full bottom-2 left-1/4 opacity-70 animate-bounce"></div>
               <div className="absolute w-2 h-2 sm:w-3 sm:h-3 bg-pink-400 rounded-full top-1/2 right-1/3 opacity-70 animate-bounce"></div>
               <div className="absolute w-3 h-3 sm:w-4 sm:h-4 bg-indigo-400 rounded-full bottom-1 right-1/4 opacity-60 animate-bounce"></div>          
-              <h2 className="flex items-center justify-center gap-3 text-xl sm:text-xl md:text-2xl lg:text-3xl font-bold leading-snug">
+              <h2 className="flex items-center justify-center gap-3 text-2xl md:text-2xl lg:text-3xl font-bold leading-snug">
                 <Briefcase
                   aria-hidden="true"
                   className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-indigo-700 flex-shrink-0"
