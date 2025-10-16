@@ -1,17 +1,5 @@
 [
     {
-        "id": 1,
-        "title": "Inscriptions Rentrée 2025",
-        "description": "Les inscriptions pour la rentrée académique 2025-2026 sont ouvertes. Dépêchez-vous de postuler !",
-        "date": "15 Octobre 2025",
-        "time": "08:00 - 17:00",
-        "location": "Secrétariat du Master",
-        "category": "Administratif",
-        "urgency": "high",
-        "link": "https://google.com",
-        "pinned": true
-    },
-    {
         "id": 2,
         "title": "Workshop Intelligence Artificielle",
         "description": "Participez à notre workshop sur les avancées récentes en IA avec des experts du domaine.",
@@ -24,8 +12,8 @@
     {
         "id": 3,
         "title": "Date Limite Projets de Fin d'Études",
-        "description": "Rappel : la date limite pour le dépôt des projets de fin d'études est fixée au 30 Novembre.",
-        "date": "30 Novembre 2024",
+        "description": "Rappel : la date limite pour le dépôt des projets de fin d'études est fixée au 30 Juin.",
+        "date": "30 Juin 2024",
         "time": "23:59",
         "location": "Plateforme en ligne",
         "category": "Académique",
@@ -64,9 +52,9 @@
     {
         "id": 7,
         "title": "Soutenance des Projets",
-        "description": "Les soutenances des projets de fin d'études auront lieu du 15 au 20 Mars 2025.",
-        "date": "15 Mars 2025",
-        "time": "09:00 - 17:00",
+        "description": "Les soutenances des projets de fin d'études auront lieu du 15 au 20 Juin 2025.",
+        "date": "15 Juin 2025",
+        "time": "09:00 - 18:00",
         "location": "Salles de Soutenance",
         "category": "Académique",
         "urgency": "medium"
@@ -82,9 +70,9 @@
         "urgency": "low"
     },
     {
-        "id": 9,
-        "title": "Résultats de la présélection",
-        "description": "Les résultats de la présélection pour la rentrée académique 2025-2026 seront publiés le 15 Octobre 2025.",
+        "id": 1,
+        "title": "Résultats de la présélection 2025-2026",
+        "description": "Les résultats de la présélection pour la rentrée académique 2025-2026 sont désormais disponibles !.",
         "date": "18 Octobre 2025",
         "time": "08:00 - 18:00",
         "location": "ENS Meknès",
