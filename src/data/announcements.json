@@ -80,5 +80,17 @@
         "location": "Campus Principal",
         "category": "Événement",
         "urgency": "low"
+    },
+    {
+        "id": 9,
+        "title": "Résultats de la présélection",
+        "description": "Les résultats de la présélection pour la rentrée académique 2025-2026 seront publiés le 15 Octobre 2025.",
+        "date": "18 Octobre 2025",
+        "time": "08:00 - 18:00",
+        "location": "ENS Meknès",
+        "category": "Administratif",
+        "urgency": "high",
+        "link": "https://www.ens.umi.ac.ma/liste-des-candidats-convoques-au-concours-oral-pour-lacces-au-cycle-master-au-titre-de-lannee-universitaire-2025-2026/",
+        "pinned": true
     }
 ]
