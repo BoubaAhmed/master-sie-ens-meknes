@@ -6,11 +6,13 @@ import promtEngineering from "../assets/ens/Activities/promtEngineering.jpeg";
 import chatbot from "../assets/ens/Activities/chatbot.jpg";
 import streamlit from "../assets/ens/Activities/streamlit.jpg";
 import defaultImg from "../assets/ens/Activities/default.jpg";
+import MR from "../assets/ens/Activities/MR_SIE.jpg";
 
 const imageMap = {
   "../assets/ens/Activities/promtEngineering.jpeg": promtEngineering,
   "../assets/ens/Activities/chatbot.jpg": chatbot,
-  "../assets/ens/Activities/streamlit.jpg": streamlit
+  "../assets/ens/Activities/streamlit.jpg": streamlit,
+  "../assets/ens/Activities/MR_SIE.jpg": MR
 };
 
 const iconMap = {
@@ -35,7 +37,7 @@ export default function Activities() {
       ? imageMap[activity.images] || defaultImg
       : [defaultImg], //si aucune image, on met celle par défaut
     icon: iconMap[activity.icon]
-  }));
+  })).reverse();
 
 
   const currentActivity = activities[currentIndex];
