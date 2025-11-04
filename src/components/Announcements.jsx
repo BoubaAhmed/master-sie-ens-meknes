@@ -7,8 +7,8 @@ export default function Announcements() {
     const carouselRef = useRef(null);
 
     // Séparer les annonces épinglées et non épinglées
-    const pinnedAnnouncements = announcements.filter(announcement => announcement.pinned === true);
-    const nonPinnedAnnouncements = announcements.filter(announcement => !announcement.pinned);
+    const pinnedAnnouncements = announcements.filter(announcement => announcement.pinned === true).reverse();
+    const nonPinnedAnnouncements = announcements.filter(announcement => !announcement.pinned).reverse();
 
     const getSlidesToShow = () => {
         if (typeof window === 'undefined') return 3;
@@ -174,8 +174,8 @@ export default function Announcements() {
                                         <h3 className="font-bold text-lg text-gray-900 mb-3 line-clamp-2">
                                             {announcement.title}
                                         </h3>
-                                        <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
-                                            {announcement.description}
+                                        <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
+                                            {announcement.description.split(" ").slice(0, 35).join(" ") + " ..."}
                                         </p>
 
                                         <div className="space-y-2 text-sm text-gray-500">
