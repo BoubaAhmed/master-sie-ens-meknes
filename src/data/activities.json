@@ -52,6 +52,17 @@
             "time": "09:30 - 12:30",
             "location": "Salle Data Science",
             "category": "Formation"
+        },
+        {
+            "id": 6,
+            "title": "Méthodologie de Recherche Scientifique : du Sujet à la Publication",
+            "description": "L’équipe M2IP, le Master SIE, le Club Robotique et la filière Informatique de l’ENS Meknès organisent une formation incontournable : Méthodologie de Recherche Scientifique : du Sujet à la Publication.",
+            "icon": "BookOpen",
+            "images": "../assets/ens/Activities/MR_SIE.jpg",
+            "date": "8 Novembre 2024",
+            "time": "09:30 - 12:00",
+            "location": "ENS Meknès",
+            "category": "Formation"
         }
     ]
 }

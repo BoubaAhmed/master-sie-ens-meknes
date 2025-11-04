@@ -70,7 +70,7 @@
         "urgency": "low"
     },
     {
-        "id": 1,
+        "id": 9,
         "title": "Résultats de la présélection 2025-2026",
         "description": "Les résultats de la présélection pour la rentrée académique 2025-2026 sont désormais disponibles !.",
         "date": "18 Octobre 2025",
@@ -79,6 +79,17 @@
         "category": "Administratif",
         "urgency": "high",
         "link": "https://www.ens.umi.ac.ma/liste-des-candidats-convoques-au-concours-oral-pour-lacces-au-cycle-master-au-titre-de-lannee-universitaire-2025-2026/",
+        "pinned": true
+    },
+    {
+        "id": 10,
+        "title": "Méthodologie de Recherche Scientifique",
+        "description": "L’équipe M2IP, le Master SIE, le Club Robotique et la filière Informatique de l’ENS Meknès organisent une formation incontournable : Méthodologie de Recherche  Scientifique : du Sujet à la Publication.",
+        "date": "8 Novembre 2025",
+        "time": "09:30 - 12:00",
+        "location": "ENS Meknès",
+        "category": "Formation",
+        "urgency": "medium",
         "pinned": true
     }
 ]
