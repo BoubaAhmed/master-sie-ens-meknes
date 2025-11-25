@@ -1,26 +1,6 @@
 [
   {
     "id": 1,
-    "title": "Système de présence automatique",
-    "module": "IoT - Classe Intelligente",
-    "professor": "Pr. Soulimae Omari",
-    "type": "Binôme",
-    "description": "Développer un système utilisant la RFID ou la reconnaissance faciale pour enregistrer automatiquement la présence des étudiants",
-    "technologies": ["Arduino", "RFID", "Python", "Base de données"],
-    "skills": ["Électronique embarquée", "Traitement de données", "Systèmes automatisés"]
-  },
-  {
-    "id": 2,
-    "title": "Surveillance de la qualité de l'air et ventilation intelligente",
-    "module": "IoT - Classe Intelligente",
-    "professor": "Pr. Soulimae Omari",
-    "type": "Binôme",
-    "description": "Créer un réseau de capteurs pour monitorer le CO2 et l'humidité avec activation automatique de la ventilation",
-    "technologies": ["Capteurs IoT", "ESP32", "MQTT", "Node-RED"],
-    "skills": ["Réseaux de capteurs", "Automatisme", "Télémétrie"]
-  },
-  {
-    "id": 3,
     "title": "Station météo éducative connectée",
     "module": "IoT - Classe Intelligente",
     "professor": "Pr. Soulimae Omari",
@@ -30,7 +10,17 @@
     "skills": ["Instrumentation", "Visualisation données", "Connectivité cloud"]
   },
   {
-    "id": 4,
+    "id": 2,
+    "title": "Robot éducatif intelligent à apprentissage par imitation",
+    "module": "Robotics - Projet Pédagogique",
+    "professor": "Pr. Ahmed Regragui",
+    "type": "Binôme",
+    "description": "Développer un robot éducatif capable d’apprendre des actions par imitation",
+    "technologies": ["Raspberry Pi", "Python", "Robotique pédagogique", "IA"],
+    "skills": ["Robotique", "IA embarquée", "Apprentissage automatique"]
+  },
+  {
+    "id": 3,
     "title": "Éclairage intelligent de la classe",
     "module": "IoT - Classe Intelligente",
     "professor": "Pr. Soulimae Omari",
@@ -40,7 +30,57 @@
     "skills": ["Gestion d'énergie", "Automatisme", "Programmation embarquée"]
   },
   {
+    "id": 4,
+    "title": "Vérification automatique de la présence à l’aide d’un Raspberry Pi",
+    "module": "Robotics - Projet Pédagogique",
+    "professor": "Pr. Ahmed Regragui",
+    "type": "Binôme",
+    "description": "Système pour vérifier automatiquement la présence des étudiants via Raspberry Pi",
+    "technologies": ["Raspberry Pi", "Caméra", "Python", "Base de données"],
+    "skills": ["Détection d’objets", "Automatisation", "Traitement de données"]
+  },
+  {
     "id": 5,
+    "title": "Système de présence automatique",
+    "module": "IoT - Classe Intelligente",
+    "professor": "Pr. Soulimae Omari",
+    "type": "Binôme",
+    "description": "Développer un système utilisant la RFID ou la reconnaissance faciale pour enregistrer automatiquement la présence des étudiants",
+    "technologies": ["Arduino", "RFID", "Python", "Base de données"],
+    "skills": ["Électronique embarquée", "Traitement de données", "Systèmes automatisés"]
+  },
+  {
+    "id": 6,
+    "title": "Robot tuteur pédagogique personnalisé",
+    "module": "Robotics - Projet Pédagogique",
+    "professor": "Pr. Ahmed Regragui",
+    "type": "Binôme",
+    "description": "Créer un robot tuteur capable de s’adapter au rythme d’apprentissage de chaque étudiant",
+    "technologies": ["Raspberry Pi", "Python", "IA", "Robotique"],
+    "skills": ["Personnalisation", "IA embarquée", "Robotique pédagogique"]
+  },
+  {
+    "id": 7,
+    "title": "Surveillance de la qualité de l'air et ventilation intelligente",
+    "module": "IoT - Classe Intelligente",
+    "professor": "Pr. Soulimae Omari",
+    "type": "Binôme",
+    "description": "Créer un réseau de capteurs pour monitorer le CO2 et l'humidité avec activation automatique de la ventilation",
+    "technologies": ["Capteurs IoT", "ESP32", "MQTT", "Node-RED"],
+    "skills": ["Réseaux de capteurs", "Automatisme", "Télémétrie"]
+  },
+  {
+    "id": 8,
+    "title": "Robot éducatif pour la reconnaissance et la classification d’objets scolaires",
+    "module": "Robotics - Projet Pédagogique",
+    "professor": "Pr. Ahmed Regragui",
+    "type": "Binôme",
+    "description": "Robot capable de reconnaître et classer les objets scolaires pour aider à l’apprentissage",
+    "technologies": ["Raspberry Pi", "Caméra", "Vision par ordinateur", "Python"],
+    "skills": ["Vision par ordinateur", "Robotique", "Classification d’objets"]
+  },
+  {
+    "id": 9,
     "title": "Indicateur sonore pour la discipline",
     "module": "IoT - Classe Intelligente",
     "professor": "Pr. Soulimae Omari",
@@ -50,7 +90,17 @@
     "skills": ["Traitement du signal", "Design d'interface", "Systèmes temps réel"]
   },
   {
-    "id": 6,
+    "id": 10,
+    "title": "Conception et réalisation d’un robot éducatif “Thymio-like” inspiré du Thymio",
+    "module": "Robotics - Projet Pédagogique",
+    "professor": "Pr. Ahmed Regragui",
+    "type": "Binôme",
+    "description": "Créer un robot éducatif simple inspiré du Thymio pour l’apprentissage pratique",
+    "technologies": ["Microcontrôleur", "Capteurs", "Python", "Robotique pédagogique"],
+    "skills": ["Robotique", "Programmation embarquée", "Design pédagogique"]
+  },
+  {
+    "id": 11,
     "title": "Jardin pédagogique connecté",
     "module": "IoT - Classe Intelligente",
     "professor": "Pr. Soulimae Omari",
@@ -58,5 +108,25 @@
     "description": "Monitoring automatisé des paramètres d'un jardin éducatif (humidité, température, luminosité)",
     "technologies": ["Capteurs horticoles", "Systèmes d'arrosage", "IoT", "Dashboard"],
     "skills": ["Agrotech", "Gestion données", "Contrôleurs automatisés"]
+  },
+  {
+    "id": 12,
+    "title": "Plateforme d’analyse de trajectoires robotiques et visualisation des données",
+    "module": "Robotics - Projet Pédagogique",
+    "professor": "Pr. Ahmed Regragui",
+    "type": "Binôme",
+    "description": "Analyser et visualiser les trajectoires de robots pour l’optimisation pédagogique",
+    "technologies": ["Python", "Raspberry Pi", "Data visualization", "Robotique"],
+    "skills": ["Analyse de données", "Robotique pédagogique", "Visualisation"]
+  },
+  {
+    "id": 13,
+    "title": "« Reading Eye » Assistant de lecture pour malvoyants avec IA embarquée",
+    "module": "Robotics - Projet Pédagogique",
+    "professor": "Pr. Ahmed Regragui",
+    "type": "Binôme",
+    "description": "Développer un assistant de lecture embarquant une IA pour aider les malvoyants",
+    "technologies": ["Raspberry Pi", "Caméra", "Python", "IA embarquée"],
+    "skills": ["Accessibilité", "IA embarquée", "Robotique pédagogique"]
   }
 ]
