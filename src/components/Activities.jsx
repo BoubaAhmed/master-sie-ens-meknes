@@ -7,7 +7,7 @@ import chatbot from "../assets/ens/Activities/chatbot.jpg";
 import streamlit from "../assets/ens/Activities/streamlit.jpg";
 import defaultImg from "../assets/ens/Activities/default.jpg";
 import MR from "../assets/ens/Activities/MR_SIE.jpg";
-import MR_SIE_Session1 from "../assets/ens/Activities/MR_SIE_Session1.jpg";
+import MR_SIE_Session1 from "../assets/ens/Activities/MR_SIE_Session1.JPG";
 
 const imageMap = {
   "../assets/ens/Activities/promtEngineering.jpeg": promtEngineering,
