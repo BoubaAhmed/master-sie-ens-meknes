@@ -14,7 +14,7 @@ const imageMap = {
   "../assets/ens/Activities/chatbot.jpg": chatbot,
   "../assets/ens/Activities/streamlit.jpg": streamlit,
   "../assets/ens/Activities/MR_SIE.jpg": MR,
-  "../assets/ens/Activities/MR_SIE_Session1.jpg": MR_SIE_Session1
+  "../assets/ens/Activities/MR_SIE_Session1.JPG": MR_SIE_Session1
 };
 
 const iconMap = {
