@@ -7,14 +7,14 @@ import chatbot from "../assets/ens/Activities/chatbot.jpg";
 import streamlit from "../assets/ens/Activities/streamlit.jpg";
 import defaultImg from "../assets/ens/Activities/default.jpg";
 import MR from "../assets/ens/Activities/MR_SIE.jpg";
-import MR_SIE_Session1 from "../assets/ens/Activities/MR_SIE_Session12.jpg";
+import MR_SIE_Session1 from "../assets/ens/Activities/MR_SIE_Session1.jpg";
 
 const imageMap = {
   "../assets/ens/Activities/promtEngineering.jpeg": promtEngineering,
   "../assets/ens/Activities/chatbot.jpg": chatbot,
   "../assets/ens/Activities/streamlit.jpg": streamlit,
   "../assets/ens/Activities/MR_SIE.jpg": MR,
-  "../assets/ens/Activities/MR_SIE_Session12.jpg": MR_SIE_Session1
+  "../assets/ens/Activities/MR_SIE_Session1.jpg": MR_SIE_Session1
 };
 
 
