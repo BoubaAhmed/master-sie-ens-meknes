@@ -17,6 +17,7 @@ const imageMap = {
   "../assets/ens/Activities/MR_SIE_Session1.jpg": MR_SIE_Session1
 };
 
+
 const iconMap = {
   Brain: <Brain className="h-4 w-4 sm:h-5 sm:w-5" />,
   Rocket: <Rocket className="h-4 w-4 sm:h-5 sm:w-5" />,
